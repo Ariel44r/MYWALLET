@@ -10,11 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let serverMAnager = ServerManager()
+    let loginParametersDict = ["Telefono": "2221474158"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        serverMAnager.loginRequest(loginParametersDict)
+        
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

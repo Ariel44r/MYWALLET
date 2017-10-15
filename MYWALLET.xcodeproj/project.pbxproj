@@ -14,6 +14,7 @@
 		4F844DA41F93F2EF005C8662 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F844DA21F93F2EF005C8662 /* LaunchScreen.storyboard */; };
 		4F844DAF1F93F2EF005C8662 /* MYWALLETTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F844DAE1F93F2EF005C8662 /* MYWALLETTests.swift */; };
 		4F844DBA1F93F2EF005C8662 /* MYWALLETUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F844DB91F93F2EF005C8662 /* MYWALLETUITests.swift */; };
+		4F844DC81F93F321005C8662 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F844DC71F93F321005C8662 /* ServerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		4F844DB51F93F2EF005C8662 /* MYWALLETUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MYWALLETUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F844DB91F93F2EF005C8662 /* MYWALLETUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MYWALLETUITests.swift; sourceTree = "<group>"; };
 		4F844DBB1F93F2EF005C8662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F844DC71F93F321005C8662 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServerManager.swift; path = MYWALLET/ServerManager/ServerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		4F844D8D1F93F2EF005C8662 = {
 			isa = PBXGroup;
 			children = (
+				4F844DC71F93F321005C8662 /* ServerManager.swift */,
 				4F844D981F93F2EF005C8662 /* MYWALLET */,
 				4F844DAD1F93F2EF005C8662 /* MYWALLETTests */,
 				4F844DB81F93F2EF005C8662 /* MYWALLETUITests */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F844D9C1F93F2EF005C8662 /* ViewController.swift in Sources */,
+				4F844DC81F93F321005C8662 /* ServerManager.swift in Sources */,
 				4F844D9A1F93F2EF005C8662 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
