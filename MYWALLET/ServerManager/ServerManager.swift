@@ -10,14 +10,14 @@ import Foundation
 
 class ServerManager {
     
-    func loginRequest(_ parametersDict: [String: Any]) {
+    func loginRequest(_ parametersDict: [String: Any], _ stringURL: String) {
         let headers = [
             "content-type": "application/json",
             "cache-control": "no-cache",
             "postman-token": "bc15409e-1c7e-be62-4d31-5f834bc5c976"
         ]
         
-        let request = NSMutableURLRequest(url: NSURL(string: "http://209.222.19.75/wsAutorizador/api/autorizador/AUTORIZADOR_ValidaUsuario/")! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+        let request = NSMutableURLRequest(url: NSURL(string: stringURL)! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
         request.httpMethod = "POST"
         request.allHTTPHeaderFields = headers
         request.httpBody = dataWithJSONObject(parametersDict)
