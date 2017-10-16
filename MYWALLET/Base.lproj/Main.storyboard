@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,66 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MYWALLET" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4T-Er-X6S">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSo-Wi-ZE0">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf0-su-4GA">
+                                                <rect key="frame" x="8" y="15.5" width="359" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="bf0-su-4GA" firstAttribute="centerX" secondItem="PSo-Wi-ZE0" secondAttribute="centerX" id="0jG-Mw-N4K"/>
+                                            <constraint firstItem="bf0-su-4GA" firstAttribute="centerY" secondItem="PSo-Wi-ZE0" secondAttribute="centerY" id="CDD-oG-IKc"/>
+                                            <constraint firstAttribute="trailing" secondItem="bf0-su-4GA" secondAttribute="trailing" constant="8" id="eBL-4i-rl5"/>
+                                            <constraint firstItem="bf0-su-4GA" firstAttribute="centerX" secondItem="PSo-Wi-ZE0" secondAttribute="centerX" id="ljs-Yb-JK8"/>
+                                            <constraint firstItem="bf0-su-4GA" firstAttribute="centerY" secondItem="PSo-Wi-ZE0" secondAttribute="centerY" id="qfo-9M-QYZ"/>
+                                            <constraint firstItem="bf0-su-4GA" firstAttribute="leading" secondItem="PSo-Wi-ZE0" secondAttribute="leading" constant="8" id="swV-Up-khS"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDX-vg-vSh">
+                                        <rect key="frame" x="164" y="368" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Ingresar"/>
+                                        <connections>
+                                            <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QjS-Oe-tQf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.50342465753424659" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="PSo-Wi-ZE0" secondAttribute="bottom" constant="607" id="7ux-0r-t9q"/>
+                                    <constraint firstAttribute="trailing" secondItem="PSo-Wi-ZE0" secondAttribute="trailing" id="NWZ-Ut-vdM"/>
+                                    <constraint firstItem="PSo-Wi-ZE0" firstAttribute="top" secondItem="p4T-Er-X6S" secondAttribute="top" id="f8c-nx-VFB"/>
+                                    <constraint firstItem="PSo-Wi-ZE0" firstAttribute="leading" secondItem="p4T-Er-X6S" secondAttribute="leading" id="wQ5-f1-bpD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="p4T-Er-X6S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CJN-8U-J3t"/>
+                            <constraint firstItem="p4T-Er-X6S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PhH-9L-iTk"/>
+                            <constraint firstItem="p4T-Er-X6S" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="U01-oM-rbh"/>
+                            <constraint firstAttribute="trailing" secondItem="p4T-Er-X6S" secondAttribute="trailing" id="yuq-pW-ee0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="114.69265367316342"/>
         </scene>
     </scenes>
 </document>

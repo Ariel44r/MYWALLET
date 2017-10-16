@@ -48,7 +48,7 @@
 		4F844DB51F93F2EF005C8662 /* MYWALLETUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MYWALLETUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F844DB91F93F2EF005C8662 /* MYWALLETUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MYWALLETUITests.swift; sourceTree = "<group>"; };
 		4F844DBB1F93F2EF005C8662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F844DC71F93F321005C8662 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServerManager.swift; path = MYWALLET/ServerManager/ServerManager.swift; sourceTree = "<group>"; };
+		4F844DC71F93F321005C8662 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 		4F844D8D1F93F2EF005C8662 = {
 			isa = PBXGroup;
 			children = (
-				4F844DC71F93F321005C8662 /* ServerManager.swift */,
+				4FB1F7301F943054007D8644 /* ServerManagerFiles */,
 				4F844D981F93F2EF005C8662 /* MYWALLET */,
 				4F844DAD1F93F2EF005C8662 /* MYWALLETTests */,
 				4F844DB81F93F2EF005C8662 /* MYWALLETUITests */,
@@ -126,6 +126,14 @@
 				4F844DBB1F93F2EF005C8662 /* Info.plist */,
 			);
 			path = MYWALLETUITests;
+			sourceTree = "<group>";
+		};
+		4FB1F7301F943054007D8644 /* ServerManagerFiles */ = {
+			isa = PBXGroup;
+			children = (
+				4F844DC71F93F321005C8662 /* ServerManager.swift */,
+			);
+			path = ServerManagerFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
