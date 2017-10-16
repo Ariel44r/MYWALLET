@@ -14,10 +14,12 @@ class ViewController: UIViewController {
     let loginParametersDict = ["Telefono": "2221474158"]
     let stringURL = "http://209.222.19.75/wsAutorizador/api/autorizador/AUTORIZADOR_ValidaUsuario/"
     
-    let messageHeader1 = "Para vincular la aplicacion a tu cuenta por favor introduce tu número telefónico"
+    let titleHeader1 = "Para vincular la aplicacion a tu cuenta por favor introduce tu número telefónico"
+    let messageBody1 = "Teléfono"
+    let messageButton1 = "INGRESAR"
     
     @IBAction func loginButton(_ sender: Any) {
-        displayFieldTextAlert(messageHeader1)
+        displayFieldTextAlert(titleHeader1, messageBody1, messageButton1)
         serverMAnager.loginRequest(loginParametersDict, stringURL)
     }
     
@@ -28,23 +30,23 @@ class ViewController: UIViewController {
     
     //MARK: Alerts
     //displaySimpleAlert
-    func displaySimpleAlert(userMessage:String) {
-        let myalert = UIAlertController(title:"Aviso", message:userMessage, preferredStyle: UIAlertControllerStyle.alert)
-        let okAction = UIAlertAction(title:"ok", style: UIAlertActionStyle.default, handler:nil)
+    func displaySimpleAlert(_ titleHeader: String, _ messageBody: String, _ buttonMessage: String) {
+        let myalert = UIAlertController(title: titleHeader, message: messageBody, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: buttonMessage, style: UIAlertActionStyle.default, handler:nil)
         myalert.addAction(okAction)
         self.present(myalert, animated:true, completion:nil)
     }
     
     //DisplayAlertFieldTextInput
-    func displayFieldTextAlert (_ messageHeader: String) {
+    func displayFieldTextAlert (_ titleHeader: String, _ messageBody: String, _ messageButton: String) {
         //Create the alert controller.
-        let alert = UIAlertController(title: messageHeader, message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: titleHeader, message: messageBody, preferredStyle: .alert)
         //Add the text field. You can configure it however you need.
         alert.addTextField { (textField) in
             textField.text = ""
         }
         //Grab the value from the text field, and print it when the user clicks OK.
-        alert.addAction(UIAlertAction(title: "INGRESAR", style: .default, handler: { [weak alert] (_) in
+        alert.addAction(UIAlertAction(title: messageButton, style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
             var textFieldUnwrapped = String()
             //checkIfTextFieldIsEmpty
@@ -52,7 +54,7 @@ class ViewController: UIViewController {
                 textFieldUnwrapped = textField!.text!
                 print("Text field: \(textFieldUnwrapped)")
             } else if textField!.text! == "" {
-                self.displaySimpleAlert(userMessage: "Aun no ha ingresado el número, por favor intente otra vez")
+                self.displaySimpleAlert("Aviso", "Aun no ha ingresado el número, por favor intente otra vez", "Ok")
             }
         }))
         //Present the alert.

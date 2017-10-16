@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf0-su-4GA">
-                                                <rect key="frame" x="8" y="15.5" width="359" height="29"/>
+                                                <rect key="frame" x="8" y="16" width="359" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -40,11 +41,16 @@
                                             <constraint firstItem="bf0-su-4GA" firstAttribute="leading" secondItem="PSo-Wi-ZE0" secondAttribute="leading" constant="8" id="swV-Up-khS"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDX-vg-vSh">
-                                        <rect key="frame" x="164" y="368" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDX-vg-vSh">
+                                        <rect key="frame" x="8" y="463" width="359" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="bgt-Qd-6lT"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Ingresar"/>
+                                        <state key="normal" title="Ingresar">
+                                            <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QjS-Oe-tQf"/>
                                         </connections>
@@ -52,9 +58,12 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.50342465753424659" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="YDX-vg-vSh" secondAttribute="bottom" constant="174" id="5Dm-kX-Pab"/>
                                     <constraint firstAttribute="bottom" secondItem="PSo-Wi-ZE0" secondAttribute="bottom" constant="607" id="7ux-0r-t9q"/>
                                     <constraint firstAttribute="trailing" secondItem="PSo-Wi-ZE0" secondAttribute="trailing" id="NWZ-Ut-vdM"/>
                                     <constraint firstItem="PSo-Wi-ZE0" firstAttribute="top" secondItem="p4T-Er-X6S" secondAttribute="top" id="f8c-nx-VFB"/>
+                                    <constraint firstItem="YDX-vg-vSh" firstAttribute="leading" secondItem="p4T-Er-X6S" secondAttribute="leadingMargin" id="kZ4-Yf-5oE"/>
+                                    <constraint firstItem="YDX-vg-vSh" firstAttribute="centerX" secondItem="PSo-Wi-ZE0" secondAttribute="centerX" id="sqR-nj-1Tu"/>
                                     <constraint firstItem="PSo-Wi-ZE0" firstAttribute="leading" secondItem="p4T-Er-X6S" secondAttribute="leading" id="wQ5-f1-bpD"/>
                                 </constraints>
                             </view>
