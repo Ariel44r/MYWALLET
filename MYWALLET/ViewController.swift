@@ -10,9 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let serverMAnager = ServerManager()
-    let loginParametersDict = ["Telefono": "2221474158"]
-    let stringURL = "http://209.222.19.75/wsAutorizador/api/autorizador/AUTORIZADOR_ValidaUsuario/"
+    let serverManager = ServerManager()
+    
     
     let titleHeader1 = "Para vincular la aplicacion a tu cuenta por favor introduce tu número telefónico"
     let messageBody1 = "Teléfono"
@@ -20,7 +19,7 @@ class ViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: Any) {
         displayFieldTextAlert(titleHeader1, messageBody1, messageButton1)
-        serverMAnager.loginRequest(loginParametersDict, stringURL)
+        //serverMAnager.loginRequest(loginParametersDict, stringURL)
     }
     
     override func viewDidLoad() {
@@ -47,18 +46,28 @@ class ViewController: UIViewController {
         }
         //Grab the value from the text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: messageButton, style: .default, handler: { [weak alert] (_) in
-            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+            let textField = alert?.textFields![0]
+            // Force unwrapping because we know it exists.
             var textFieldUnwrapped = String()
             //checkIfTextFieldIsEmpty
             if textField!.text != nil && textField!.text! != "" {
                 textFieldUnwrapped = textField!.text!
                 print("Text field: \(textFieldUnwrapped)")
+                //CallTheService
+                self.callLoginService(textFieldUnwrapped)
             } else if textField!.text! == "" {
                 self.displaySimpleAlert("Aviso", "Aun no ha ingresado el número, por favor intente otra vez", "Ok")
             }
         }))
         //Present the alert.
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func callLoginService(_ phone: String) {
+        //["Telefono": "2221474158"]
+        let loginParametersDict = ["Telefono": phone]
+        let stringURL = "http://209.222.19.75/wsAutorizador/api/autorizador/AUTORIZADOR_ValidaUsuario/"
+        self.serverManager.loginRequest(loginParametersDict, stringURL)
     }
     
     override func didReceiveMemoryWarning() {
