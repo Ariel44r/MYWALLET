@@ -10,7 +10,7 @@ import Foundation
 
 class ServerManager {
     
-    func loginRequest(_ parametersDict: [String: Any], _ stringURL: String) {
+    func postRequest(_ parametersDict: [String: Any], _ stringURL: String) {
         let headers = [
             "content-type": "application/json",
             "cache-control": "no-cache",

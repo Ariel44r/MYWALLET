@@ -10,16 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //MARK: variablesAndInstances
     let serverManager = ServerManager()
-    
-    
     let titleHeader1 = "Para vincular la aplicacion a tu cuenta por favor introduce tu número telefónico"
     let messageBody1 = "Teléfono"
     let messageButton1 = "INGRESAR"
     
+    //outletsAndActions
+    @IBOutlet weak var headerLabel: UILabel!
+    
     @IBAction func loginButton(_ sender: Any) {
         displayFieldTextAlert(titleHeader1, messageBody1, messageButton1)
-        //serverMAnager.loginRequest(loginParametersDict, stringURL)
     }
     
     override func viewDidLoad() {
@@ -27,11 +28,27 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    //MARK: Alerts
+    func callLoginService(_ phone: String) {
+        //["Telefono": "2221474158"]
+        let loginParametersDict = ["Telefono": phone]
+        let stringURL = "http://209.222.19.75/wsAutorizador/api/autorizador/AUTORIZADOR_ValidaUsuario/"
+        self.serverManager.postRequest(loginParametersDict, stringURL)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+
+}
+
+//MARK: Alerts
+extension ViewController {
     //displaySimpleAlert
-    func displaySimpleAlert(_ titleHeader: String, _ messageBody: String, _ buttonMessage: String) {
+    func displaySimpleAlert(_ titleHeader: String, _ messageBody: String, _ messageButton: String) {
         let myalert = UIAlertController(title: titleHeader, message: messageBody, preferredStyle: UIAlertControllerStyle.alert)
-        let okAction = UIAlertAction(title: buttonMessage, style: UIAlertActionStyle.default, handler:nil)
+        let okAction = UIAlertAction(title: messageButton, style: UIAlertActionStyle.default, handler:nil)
         myalert.addAction(okAction)
         self.present(myalert, animated:true, completion:nil)
     }
@@ -54,7 +71,9 @@ class ViewController: UIViewController {
                 textFieldUnwrapped = textField!.text!
                 print("Text field: \(textFieldUnwrapped)")
                 //CallTheService
-                self.callLoginService(textFieldUnwrapped)
+                if messageButton == "INGRESAR" {
+                    self.callLoginService(textFieldUnwrapped)
+                }
             } else if textField!.text! == "" {
                 self.displaySimpleAlert("Aviso", "Aun no ha ingresado el número, por favor intente otra vez", "Ok")
             }
@@ -62,19 +81,5 @@ class ViewController: UIViewController {
         //Present the alert.
         self.present(alert, animated: true, completion: nil)
     }
-    
-    func callLoginService(_ phone: String) {
-        //["Telefono": "2221474158"]
-        let loginParametersDict = ["Telefono": phone]
-        let stringURL = "http://209.222.19.75/wsAutorizador/api/autorizador/AUTORIZADOR_ValidaUsuario/"
-        self.serverManager.loginRequest(loginParametersDict, stringURL)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

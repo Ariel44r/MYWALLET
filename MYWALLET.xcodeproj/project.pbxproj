@@ -441,6 +441,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FPCET9U9S6;
 				INFOPLIST_FILE = MYWALLET/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "armit-solutions.MYWALLET";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -456,6 +457,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FPCET9U9S6;
 				INFOPLIST_FILE = MYWALLET/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "armit-solutions.MYWALLET";
 				PRODUCT_NAME = "$(TARGET_NAME)";
