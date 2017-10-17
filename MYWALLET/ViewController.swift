@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         //["Telefono": "2221474158"]
         let loginParametersDict = ["Telefono": phone]
         let stringURL = "http://209.222.19.75/wsAutorizador/api/autorizador/AUTORIZADOR_ValidaUsuario/"
-        self.serverManager.postRequest(loginParametersDict, stringURL)
+        serverManager.postRequest(loginParametersDict, stringURL)
     }
     
     override func didReceiveMemoryWarning() {
