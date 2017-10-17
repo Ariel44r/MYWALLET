@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     let titleHeader1 = "Para vincular la aplicacion a tu cuenta por favor introduce tu número telefónico"
     let messageBody1 = "Teléfono"
     let messageButton1 = "INGRESAR"
+    var dataFromServer: NSDictionary = [:]
     
     //outletsAndActions
     @IBOutlet weak var headerLabel: UILabel!
@@ -32,15 +33,25 @@ class ViewController: UIViewController {
         //["Telefono": "2221474158"]
         let loginParametersDict = ["Telefono": phone]
         let stringURL = "http://209.222.19.75/wsAutorizador/api/autorizador/AUTORIZADOR_ValidaUsuario/"
-        serverManager.postRequest(loginParametersDict, stringURL)
+        serverManager.postRequest(loginParametersDict, stringURL) {
+            results, error in
+            if let error = error {
+                debugPrint("Error searching \(error)")
+                return
+            }
+            if let results = results {
+                self.dataFromServer = results
+                debugPrint("DATA FROM SERVER: ")
+                debugPrint(self.dataFromServer)
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
 }
 
 //MARK: Alerts

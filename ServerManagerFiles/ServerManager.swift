@@ -10,7 +10,9 @@ import Foundation
 
 class ServerManager {
     
-    func postRequest(_ parametersDict: [String: Any], _ stringURL: String) {
+    let processingQueue = OperationQueue()
+    
+    func postRequest(_ parametersDict: [String: Any], _ stringURL: String, _ completion: @escaping (_ results: NSDictionary?, _ error: Error?) -> Void) {
         let headers = [
             "content-type": "application/json",
             "cache-control": "no-cache",
@@ -27,10 +29,12 @@ class ServerManager {
                 debugPrint(error ?? "received error from server")
             } else {
                 let httpResponse = response as! HTTPURLResponse
-                print("server Response: \(httpResponse)")
+                debugPrint("server Response: \(httpResponse)")
             }
             let parsedJSON = self.jsonObjectWithData(data!)
-            debugPrint(parsedJSON)
+            OperationQueue.main.addOperation({
+                completion(parsedJSON, nil)
+            })
         })
         dataTask.resume()
     }
