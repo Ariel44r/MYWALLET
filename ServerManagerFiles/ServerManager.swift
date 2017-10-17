@@ -14,12 +14,10 @@ class ServerManager {
     
     func postRequest(_ parametersDict: [String: Any], _ stringURL: String, _ completion: @escaping (_ results: NSDictionary?, _ error: Error?) -> Void) {
         let headers = [
-            "content-type": "application/json",
-            "cache-control": "no-cache",
-            "postman-token": "bc15409e-1c7e-be62-4d31-5f834bc5c976"
+            "Content-Type": "application/json"
         ]
         
-        let request = NSMutableURLRequest(url: NSURL(string: stringURL)! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+        let request = NSMutableURLRequest(url: NSURL(string: stringURL)! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 30.0)
         request.httpMethod = "POST"
         request.allHTTPHeaderFields = headers
         request.httpBody = dataWithJSONObject(parametersDict)
@@ -31,10 +29,12 @@ class ServerManager {
                 let httpResponse = response as! HTTPURLResponse
                 debugPrint("server Response: \(httpResponse)")
             }
-            let parsedJSON = self.jsonObjectWithData(data!)
-            OperationQueue.main.addOperation({
-                completion(parsedJSON, nil)
-            })
+            if let dataReceived = data {
+                let parsedJSON = self.jsonObjectWithData(dataReceived)
+                OperationQueue.main.addOperation({
+                    completion(parsedJSON, nil)
+                })
+            }
         })
         dataTask.resume()
     }
