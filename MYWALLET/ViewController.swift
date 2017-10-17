@@ -80,13 +80,14 @@ class ViewController: UIViewController {
             if let results = results {
                 //after receive data from server
                 let response = self.parseResponse(results)
+                //sendSMSFunc response.tokenSeguridad
                 debugPrint("\(response.codigoRespuesta), \(response.descripcion), \(response.ID_usuario), \(response.tokenSeguridad)")
             }
         }
     }
     
     //validateResponseCode
-    func validateResponseCode(_ dataFromServer: NSDictionary) -> Bool{
+    func validateResponseCode(_ dataFromServer: NSDictionary) -> Bool {
         if let CodigoRespuesta = dataFromServer["CodigoRespuesta"] as? String {
             debugPrint("CODIGO DE RESPUESTA: \(CodigoRespuesta)")
             return true
