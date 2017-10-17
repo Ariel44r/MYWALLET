@@ -17,16 +17,11 @@ class ViewController: UIViewController {
     let messageButton1 = "INGRESAR"
     var dataFromServer: NSDictionary = [:]
     
-    //outletsAndActions
+    //mark: outletsAndActions
     @IBOutlet weak var headerLabel: UILabel!
     
     @IBAction func loginButton(_ sender: Any) {
         displayFieldTextAlert(titleHeader1, messageBody1, messageButton1)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     func callLoginService(_ phone: String) {
@@ -41,10 +36,23 @@ class ViewController: UIViewController {
             }
             if let results = results {
                 self.dataFromServer = results
-                debugPrint("DATA FROM SERVER: ")
-                debugPrint(self.dataFromServer)
+                /*debugPrint("DATA FROM SERVER: ")
+                debugPrint(self.dataFromServer)*/
+                self.validateResponseCode(self.dataFromServer)
             }
         }
+    }
+    
+    //validateResponseCode
+    func validateResponseCode(_ dataFromServer: NSDictionary) {
+        if let CodigoRespuesta = dataFromServer["CodigoRespuesta"] as? String {
+            debugPrint("CODIGO DE RESPUESTA: \(CodigoRespuesta)")
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
