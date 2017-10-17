@@ -47,8 +47,6 @@ class ViewController: UIViewController {
             }
             if let results = results {
                 self.dataFromServer = results
-                /*debugPrint("DATA FROM SERVER: ")
-                debugPrint(self.dataFromServer)*/
                 if self.validateResponseCode(self.dataFromServer) {
                     self.callSMSValidationService(phone)
                 }
@@ -57,15 +55,15 @@ class ViewController: UIViewController {
     }
     
     func callSMSValidationService(_ telefono: String) {
-        displayFieldTextAlert(titleHeader2, messageBody2, messageButton2) {
-            results, error in
-            if let error = error {
-                debugPrint("Error: \(error)")
+            displayFieldTextAlert(titleHeader2, messageBody2, messageButton2) {
+                results, error in
+                if let error = error {
+                    debugPrint("Error: \(error)")
+                }
+                if let results = results {
+                    debugPrint(results)
+                }
             }
-            if let results = results {
-                debugPrint(results)
-            }
-        }
         let smsParameters = [
             "Telefono":telefono,
             "OneSignalUserID":"1234",
@@ -81,7 +79,8 @@ class ViewController: UIViewController {
             }
             if let results = results {
                 //after receive data from server
-                debugPrint(results)
+                let response = self.parseResponse(results)
+                debugPrint("\(response.codigoRespuesta), \(response.descripcion), \(response.ID_usuario), \(response.tokenSeguridad)")
             }
         }
     }
@@ -93,6 +92,16 @@ class ViewController: UIViewController {
             return true
         }
         return false
+    }
+    
+    //parseResponse
+    func parseResponse(_ results: NSDictionary) -> Response {
+        let codigoRespuesta: String = results["CodigoRespuesta"] as! String
+        let descripcion: String = results["Descripcion"] as! String
+        let ID_usuario: String = results["ID_Usuario"] as! String
+        let tokenSeguridad: String =  results["TokenSeguridad"] as! String
+        let response = Response(codigoRespuesta,descripcion,ID_usuario,tokenSeguridad)
+        return response
     }
     
     override func viewDidLoad() {
