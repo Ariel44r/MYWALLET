@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var headerLabel: UILabel!
     
     @IBAction func loginButton(_ sender: Any) {
-        displayFieldTextAlert(titleHeader1, messageBody1, messageButton1)
+        displayFieldTextAlert(titleHeader1, messageBody1, messageButton1, "")
     }
     
     func callLoginService(_ phone: String) {
@@ -38,16 +38,41 @@ class ViewController: UIViewController {
                 self.dataFromServer = results
                 /*debugPrint("DATA FROM SERVER: ")
                 debugPrint(self.dataFromServer)*/
-                self.validateResponseCode(self.dataFromServer)
+                if self.validateResponseCode(self.dataFromServer) {
+                    self.displayFieldTextAlert("Introduce el código de validacion que recibiste vía SMS", "Código de validacion", "VALIDAR", phone)
+                }
+            }
+        }
+    }
+    
+    func callSMSValidationService(_ telefono: String) {
+        let smsParameters = [
+            "Telefono":telefono,
+            "OneSignalUserID":"1234",
+            "OneSignalRegistrationID":"1234",
+            "CodigoValidacion":"123456"
+        ]
+        let stringURL = "http://209.222.19.75/wsAutorizador/api/autorizador/AUTORIZADOR_ValidacionSMS"
+        serverManager.postRequest(smsParameters, stringURL) {
+            results, error in
+            if let error = error {
+                debugPrint("Error searching \(error)")
+                return
+            }
+            if let results = results {
+                //after receive data from server
+                debugPrint(results)
             }
         }
     }
     
     //validateResponseCode
-    func validateResponseCode(_ dataFromServer: NSDictionary) {
+    func validateResponseCode(_ dataFromServer: NSDictionary) -> Bool{
         if let CodigoRespuesta = dataFromServer["CodigoRespuesta"] as? String {
             debugPrint("CODIGO DE RESPUESTA: \(CodigoRespuesta)")
+            return true
         }
+        return false
     }
     
     override func viewDidLoad() {
@@ -73,7 +98,7 @@ extension ViewController {
     }
     
     //DisplayAlertFieldTextInput
-    func displayFieldTextAlert (_ titleHeader: String, _ messageBody: String, _ messageButton: String) {
+    func displayFieldTextAlert (_ titleHeader: String, _ messageBody: String, _ messageButton: String, _ dataExtra: String) {
         //Create the alert controller.
         let alert = UIAlertController(title: titleHeader, message: messageBody, preferredStyle: .alert)
         //Add the text field. You can configure it however you need.
@@ -92,6 +117,9 @@ extension ViewController {
                 //CallTheService
                 if messageButton == "INGRESAR" {
                     self.callLoginService(textFieldUnwrapped)
+                }
+                if messageButton == "VALIDAR" {
+                    self.callSMSValidationService(dataExtra)
                 }
             } else if textField!.text! == "" {
                 self.displaySimpleAlert("Aviso", "Aun no ha ingresado el número, por favor intente otra vez", "Ok")
