@@ -16,9 +16,11 @@ class ViewController: UIViewController {
     let messageBody1 = "Teléfono"
     let messageButton1 = "INGRESAR"
     var dataFromServer: NSDictionary = [:]
-    let titleHeader2 = "Introduce el código de validación que recibiste vía SMS"
-    let messageBody2 = "Código de validación"
-    let messageButton2 = "VALIDAR"
+    let textAlertParameters2 = [
+        "titleHeader":"Introduce el código de validación que recibiste vía SMS",
+        "messageBody":"Código de validación",
+        "messageButton":"VALIDAR",
+    ]
     
     //mark: outletsAndActions
     @IBOutlet weak var headerLabel: UILabel!
@@ -47,13 +49,14 @@ class ViewController: UIViewController {
             if let results = results {
                 self.dataFromServer = results
                 if self.validateResponseCode(self.dataFromServer) {
-                    self.callSMSValidationService(phone)
+                    self.callSMSValidationService(phone, self.textAlertParameters2)
                 }
             }
         }
     }
     
-    func callSMSValidationService(_ telefono: String) {
+    func callSMSValidationService(_ telefono: String, _ textAletrParameters: [String: String]) {
+        headerLabel.text = "Validación SMS"
         let smsParameters = [
             "Telefono":telefono,
             "OneSignalUserID":"1234",
@@ -62,7 +65,7 @@ class ViewController: UIViewController {
         ]
         let stringURL = "http://209.222.19.75/wsAutorizador/api/autorizador/AUTORIZADOR_ValidacionSMS"
         var codigoValidacionInput: String?
-        displayFieldTextAlert(titleHeader2, messageBody2, messageButton2) {
+        displayFieldTextAlert(textAletrParameters["titleHeader"]!, textAletrParameters["messageBody"]!, textAletrParameters["messageButton"]!) {
             results, error in
             if let error = error {
                 debugPrint("Error: \(error)")
@@ -86,12 +89,24 @@ class ViewController: UIViewController {
                                     //callFunctionToDownloadMovements
                                     debugPrint("CALL FUNCTION TO DOWNLOAD MOVEMENTS")
                                 }
+                                else {
+                                    self.recallSMSValidation(telefono)
+                                }
                             }
                         }
                     }
                 }
             }
         }
+    }
+    
+    func recallSMSValidation(_ telefono: String) {
+        let textAlertParameters = [
+            "titleHeader":"El código de validación es incorrecto, porfavor intenta nuevamente",
+            "messageBody":"Código de validación",
+            "messageButton":"VALIDAR",
+            ]
+        self.callSMSValidationService(telefono, textAlertParameters)
     }
     
     //validateResponseCode
@@ -162,6 +177,15 @@ extension ViewController {
         }))
         //Present the alert.
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    //displaySimpleAlertWithIndicator
+    func displaySimpleAlertWithIndicator(_ titleHeader: String, _ messageBody: String, _ messageButton: String) -> Bool {
+        let myalert = UIAlertController(title: titleHeader, message: messageBody, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: messageButton, style: UIAlertActionStyle.default, handler:nil)
+        myalert.addAction(okAction)
+        self.present(myalert, animated:true, completion:nil)
+        return true
     }
 }
 
