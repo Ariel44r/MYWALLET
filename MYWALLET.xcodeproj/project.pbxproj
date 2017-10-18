@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F4952001F980CC4007EFFBB /* Movements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4951FF1F980CC4007EFFBB /* Movements.swift */; };
+		4F4952021F981114007EFFBB /* MovementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4952011F981114007EFFBB /* MovementsViewController.swift */; };
+		4F4952051F9811C1007EFFBB /* MovementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4952041F9811C1007EFFBB /* MovementTableViewCell.swift */; };
+		4F4952071F981395007EFFBB /* ProcessMovements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4952061F981395007EFFBB /* ProcessMovements.swift */; };
 		4F844D9A1F93F2EF005C8662 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F844D991F93F2EF005C8662 /* AppDelegate.swift */; };
 		4F844D9C1F93F2EF005C8662 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F844D9B1F93F2EF005C8662 /* ViewController.swift */; };
 		4F844D9F1F93F2EF005C8662 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F844D9D1F93F2EF005C8662 /* Main.storyboard */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F4951FF1F980CC4007EFFBB /* Movements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Movements.swift; path = ServerManagerFiles/Movements.swift; sourceTree = SOURCE_ROOT; };
+		4F4952011F981114007EFFBB /* MovementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementsViewController.swift; sourceTree = "<group>"; };
+		4F4952041F9811C1007EFFBB /* MovementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementTableViewCell.swift; sourceTree = "<group>"; };
+		4F4952061F981395007EFFBB /* ProcessMovements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessMovements.swift; sourceTree = "<group>"; };
 		4F844D961F93F2EF005C8662 /* MYWALLET.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYWALLET.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F844D991F93F2EF005C8662 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F844D9B1F93F2EF005C8662 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +86,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F4952031F98111C007EFFBB /* Movements */ = {
+			isa = PBXGroup;
+			children = (
+				4F4952061F981395007EFFBB /* ProcessMovements.swift */,
+				4F4952011F981114007EFFBB /* MovementsViewController.swift */,
+				4F4952041F9811C1007EFFBB /* MovementTableViewCell.swift */,
+			);
+			path = Movements;
+			sourceTree = "<group>";
+		};
 		4F844D8D1F93F2EF005C8662 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +123,7 @@
 				4F844D991F93F2EF005C8662 /* AppDelegate.swift */,
 				4F844D9B1F93F2EF005C8662 /* ViewController.swift */,
 				4F844D9D1F93F2EF005C8662 /* Main.storyboard */,
+				4F4952031F98111C007EFFBB /* Movements */,
 				4F844DA01F93F2EF005C8662 /* Assets.xcassets */,
 				4F844DA21F93F2EF005C8662 /* LaunchScreen.storyboard */,
 				4F844DA51F93F2EF005C8662 /* Info.plist */,
@@ -135,6 +154,7 @@
 			children = (
 				4FCBBDEA1F96C36700B8475C /* Response.swift */,
 				4F844DC71F93F321005C8662 /* ServerManager.swift */,
+				4F4951FF1F980CC4007EFFBB /* Movements.swift */,
 			);
 			path = ServerManagerFiles;
 			sourceTree = "<group>";
@@ -273,9 +293,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F4952051F9811C1007EFFBB /* MovementTableViewCell.swift in Sources */,
 				4FCBBDEB1F96C36700B8475C /* Response.swift in Sources */,
+				4F4952001F980CC4007EFFBB /* Movements.swift in Sources */,
 				4F844D9C1F93F2EF005C8662 /* ViewController.swift in Sources */,
+				4F4952021F981114007EFFBB /* MovementsViewController.swift in Sources */,
 				4F844DC81F93F321005C8662 /* ServerManager.swift in Sources */,
+				4F4952071F981395007EFFBB /* ProcessMovements.swift in Sources */,
 				4F844D9A1F93F2EF005C8662 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -87,7 +87,8 @@ class ViewController: UIViewController {
                             if let codigoValidacion = smsParameters["CodigoValidacion"] {
                                 if codigoValidacion == codigoValidacionInput {
                                     //callFunctionToDownloadMovements
-                                    debugPrint("CALL FUNCTION TO DOWNLOAD MOVEMENTS")
+                                    debugPrint("DEPLOY MOVEMENTS")
+                                    self.performSegue(withIdentifier: "movementsSegue", sender: nil)
                                 }
                                 else {
                                     self.recallSMSValidation(telefono)
