@@ -9,6 +9,7 @@
 import Foundation
 
 class Response {
+    
     var codigoRespuesta: String
     var descripcion: String
     var ID_usuario: String
@@ -20,4 +21,12 @@ class Response {
         self.ID_usuario = ID_usuario
         self.tokenSeguridad = tokenSeguridad
     }
+    
+    func printResponse() {
+        debugPrint("CódigoRespuesta: \(codigoRespuesta)")
+        debugPrint("Descripcion: \(descripcion)")
+        debugPrint("ID_Usuario: \(ID_usuario)")
+        debugPrint("TokenSeguridad: \(tokenSeguridad)")
+    }
+    
 }

@@ -36,7 +36,6 @@ class ViewController: UIViewController {
     }
     
     func callLoginService(_ phone: String) {
-        //["Telefono": "2221474158"]
         let loginParametersDict = ["Telefono": phone]
         let stringURL = "http://209.222.19.75/wsAutorizador/api/autorizador/AUTORIZADOR_ValidaUsuario/"
         serverManager.postRequest(loginParametersDict, stringURL) {
@@ -55,15 +54,6 @@ class ViewController: UIViewController {
     }
     
     func callSMSValidationService(_ telefono: String) {
-            displayFieldTextAlert(titleHeader2, messageBody2, messageButton2) {
-                results, error in
-                if let error = error {
-                    debugPrint("Error: \(error)")
-                }
-                if let results = results {
-                    debugPrint(results)
-                }
-            }
         let smsParameters = [
             "Telefono":telefono,
             "OneSignalUserID":"1234",
@@ -71,17 +61,35 @@ class ViewController: UIViewController {
             "CodigoValidacion":"123456"
         ]
         let stringURL = "http://209.222.19.75/wsAutorizador/api/autorizador/AUTORIZADOR_ValidacionSMS"
-        serverManager.postRequest(smsParameters, stringURL) {
+        var codigoValidacionInput: String?
+        displayFieldTextAlert(titleHeader2, messageBody2, messageButton2) {
             results, error in
             if let error = error {
-                debugPrint("Error searching \(error)")
-                return
+                debugPrint("Error: \(error)")
             }
             if let results = results {
-                //after receive data from server
-                let response = self.parseResponse(results)
-                //sendSMSFunc response.tokenSeguridad
-                debugPrint("\(response.codigoRespuesta), \(response.descripcion), \(response.ID_usuario), \(response.tokenSeguridad)")
+                debugPrint(results)
+                codigoValidacionInput = results
+                self.serverManager.postRequest(smsParameters, stringURL) {
+                    results, error in
+                    if let error = error {
+                        debugPrint("Error from server: \(error)")
+                        return
+                    }
+                    if let results = results {
+                        //after receive data from server
+                        if self.validateResponseCode(results) {
+                            let response = self.parseResponse(results)
+                            response.printResponse()
+                            if let codigoValidacion = smsParameters["CodigoValidacion"] {
+                                if codigoValidacion == codigoValidacionInput {
+                                    //callFunctionToDownloadMovements
+                                    debugPrint("CALL FUNCTION TO DOWNLOAD MOVEMENTS")
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
