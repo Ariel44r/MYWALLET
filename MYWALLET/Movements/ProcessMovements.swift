@@ -24,10 +24,21 @@ class ProcessMovements {
                 return
             }
             if let results = results {
-                debugPrint(results)
+                //debugPrint(results)
                 //parseResultsAndReceiveMovementsObject
+                self.parseResponse(results)
             }
         }
+    }
+    
+    //parseResponse
+    func parseResponse(_ results: NSDictionary) {
+        let codigoRespuesta: Int = results["CodigoRespuesta"] as! Int
+        let descripcion: String = results["Descripcion"] as! String
+        let saldo: String = results["Saldo"] as! String
+        debugPrint("codigo: \(codigoRespuesta), descripcion: \(descripcion), saldo: \(saldo)")
+        let operaciones: NSArray = results["OPERACIONES"] as! NSArray
+        debugPrint(operaciones)
     }
     
 }
