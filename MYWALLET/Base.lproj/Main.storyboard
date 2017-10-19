@@ -135,8 +135,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXc-Wn-YKM">
-                                                    <rect key="frame" x="166" y="8" width="201" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXc-Wn-YKM">
+                                                    <rect key="frame" x="115" y="8" width="252" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="JjP-Qz-Ws2"/>
                                                     </constraints>
@@ -145,7 +145,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6b-YK-8Sf">
-                                                    <rect key="frame" x="222" y="37" width="145" height="21"/>
+                                                    <rect key="frame" x="171" y="37" width="196" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="R9W-FC-ztE"/>
                                                     </constraints>
@@ -153,8 +153,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYq-Ya-Xfz">
-                                                    <rect key="frame" x="166" y="70" width="201" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYq-Ya-Xfz">
+                                                    <rect key="frame" x="115" y="70" width="252" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Lxg-Hg-Ql2"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="201" id="eI8-Sc-6wx"/>
@@ -164,7 +164,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mastercard" translatesAutoresizingMaskIntoConstraints="NO" id="3aH-fF-1sb">
-                                                    <rect key="frame" x="161" y="34" width="53" height="31"/>
+                                                    <rect key="frame" x="115" y="32" width="53" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="53" id="LQ9-Ka-UdE"/>
                                                         <constraint firstAttribute="height" constant="31" id="kIe-Yp-Olv"/>
@@ -174,7 +174,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="e6b-YK-8Sf" firstAttribute="trailing" secondItem="nYq-Ya-Xfz" secondAttribute="trailing" id="42S-kZ-XIY"/>
-                                                <constraint firstItem="nYq-Ya-Xfz" firstAttribute="top" secondItem="3aH-fF-1sb" secondAttribute="bottom" constant="5" id="7rs-lQ-a0U"/>
+                                                <constraint firstItem="nYq-Ya-Xfz" firstAttribute="top" secondItem="3aH-fF-1sb" secondAttribute="bottom" constant="7" id="7rs-lQ-a0U"/>
                                                 <constraint firstItem="hik-2D-kRP" firstAttribute="trailing" secondItem="HLG-9z-xyH" secondAttribute="trailing" id="Agg-fa-dhd"/>
                                                 <constraint firstItem="HLG-9z-xyH" firstAttribute="leading" secondItem="6qt-po-PKx" secondAttribute="leading" id="Aqb-A3-Nkl"/>
                                                 <constraint firstItem="HLG-9z-xyH" firstAttribute="top" secondItem="hik-2D-kRP" secondAttribute="bottom" constant="8" symbolic="YES" id="DV7-hN-mNm"/>
@@ -185,21 +185,21 @@
                                                 <constraint firstItem="dXc-Wn-YKM" firstAttribute="trailing" secondItem="4vG-4I-rFO" secondAttribute="trailingMargin" id="Umg-3z-StV"/>
                                                 <constraint firstItem="hik-2D-kRP" firstAttribute="top" secondItem="4vG-4I-rFO" secondAttribute="topMargin" id="VAZ-7A-FC7"/>
                                                 <constraint firstItem="hik-2D-kRP" firstAttribute="baseline" secondItem="dXc-Wn-YKM" secondAttribute="baseline" id="VBg-QB-PIz"/>
-                                                <constraint firstItem="3aH-fF-1sb" firstAttribute="top" secondItem="dXc-Wn-YKM" secondAttribute="bottom" constant="5" id="bLQ-FN-QZs"/>
+                                                <constraint firstItem="3aH-fF-1sb" firstAttribute="top" secondItem="dXc-Wn-YKM" secondAttribute="bottom" constant="3" id="bLQ-FN-QZs"/>
                                                 <constraint firstItem="dXc-Wn-YKM" firstAttribute="leading" secondItem="hik-2D-kRP" secondAttribute="trailing" constant="72" id="beQ-Lx-9XN"/>
-                                                <constraint firstItem="3aH-fF-1sb" firstAttribute="centerX" secondItem="4vG-4I-rFO" secondAttribute="centerX" id="bq8-Af-WbW"/>
+                                                <constraint firstItem="3aH-fF-1sb" firstAttribute="centerX" secondItem="4vG-4I-rFO" secondAttribute="centerX" constant="-46" id="bq8-Af-WbW"/>
                                                 <constraint firstItem="hik-2D-kRP" firstAttribute="leading" secondItem="HLG-9z-xyH" secondAttribute="leading" id="dxo-Dh-07o"/>
                                                 <constraint firstItem="HLG-9z-xyH" firstAttribute="trailing" secondItem="6qt-po-PKx" secondAttribute="trailing" id="iD1-IV-csF"/>
-                                                <constraint firstItem="e6b-YK-8Sf" firstAttribute="leading" secondItem="3aH-fF-1sb" secondAttribute="trailing" constant="8" symbolic="YES" id="nEz-3d-ke7"/>
+                                                <constraint firstItem="e6b-YK-8Sf" firstAttribute="leading" secondItem="3aH-fF-1sb" secondAttribute="trailing" constant="3" id="nEz-3d-ke7"/>
                                                 <constraint firstItem="hik-2D-kRP" firstAttribute="leading" secondItem="4vG-4I-rFO" secondAttribute="leadingMargin" constant="14" id="nKJ-z4-FIG"/>
                                                 <constraint firstItem="nYq-Ya-Xfz" firstAttribute="top" secondItem="e6b-YK-8Sf" secondAttribute="bottom" constant="12" id="uaE-gK-MdB"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="nYq-Ya-Xfz" secondAttribute="bottom" constant="10.5" id="vJN-hv-TgK"/>
-                                                <constraint firstItem="3aH-fF-1sb" firstAttribute="leading" secondItem="HLG-9z-xyH" secondAttribute="trailing" constant="67" id="zYb-sL-Uof"/>
+                                                <constraint firstItem="3aH-fF-1sb" firstAttribute="leading" secondItem="HLG-9z-xyH" secondAttribute="trailing" constant="21" id="zYb-sL-Uof"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="labelFecha" destination="hik-2D-kRP" id="0p6-HN-Hz3"/>
-                                            <outlet property="labelFechaServer" destination="4vG-4I-rFO" id="QMn-Yt-Y9N"/>
+                                            <outlet property="labelFechaServer" destination="dXc-Wn-YKM" id="oyg-Et-kjF"/>
                                             <outlet property="labelImporteServer" destination="nYq-Ya-Xfz" id="Kxs-qN-fMt"/>
                                             <outlet property="labelMonto" destination="6qt-po-PKx" id="ADh-sr-oci"/>
                                             <outlet property="labelTarjeta" destination="HLG-9z-xyH" id="uMx-yb-EuA"/>
@@ -268,6 +268,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Re0-sj-eRz"/>
                     </view>
+                    <connections>
+                        <outlet property="labelMyWallet" destination="Pni-0F-FEQ" id="EK2-Mh-hBv"/>
+                        <outlet property="labelSaldo" destination="oMe-dF-pfZ" id="qKn-0o-VHf"/>
+                        <outlet property="labelSaldoServer" destination="e2g-hc-ISk" id="HQ0-gP-Odi"/>
+                        <outlet property="movementsTableView" destination="vwC-T5-bv3" id="fi3-Qq-AmJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pD3-Na-Uog" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

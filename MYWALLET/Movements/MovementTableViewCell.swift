@@ -14,7 +14,7 @@ class MovementTableViewCell: UITableViewCell {
     @IBOutlet weak var labelFecha: UILabel!
     @IBOutlet weak var labelTarjeta: UILabel!
     @IBOutlet weak var labelMonto: UILabel!
-    @IBOutlet weak var labelFechaServer: UIView!
+    @IBOutlet weak var labelFechaServer: UILabel!
     @IBOutlet weak var labelTarjetaServer: UILabel!
     @IBOutlet weak var labelImporteServer: UILabel!
     

@@ -14,12 +14,37 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
     var response: Response?
     let reuseIdentifier = "movementsCell"
     let processMovements = ProcessMovements()
+    var movements = [Movements]()
+    var responseMovements: ResponseMovements?
+    
+    //MARK: Outlets
+    @IBOutlet weak var movementsTableView: UITableView!
+    @IBOutlet weak var labelMyWallet: UILabel!
+    @IBOutlet weak var labelSaldoServer: UILabel!
+    @IBOutlet weak var labelSaldo: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.response!.printResponse()
-        processMovements.callMovementsService(self.response!.tokenSeguridad)
+        processMovements.callMovementsService(self.response!.tokenSeguridad) {
+            results, resultsArray, error in
+            if let error = error {
+                debugPrint(error)
+            }
+            if let results = results {
+                //receivedResponseMovementsObject
+                self.responseMovements = results
+                self.labelSaldo.text = results.saldo
+                debugPrint("SALDO: \(results.saldo)")
+            }
+            if let resultsArray = resultsArray {
+                //receivedMovementsArray
+                self.movements = resultsArray
+                self.movementsTableView.reloadData()
+                debugPrint("Tarjeta: \(resultsArray[0].tarjeta)")
+            }
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -44,11 +69,15 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
 //MARK: Delegates
 extension MovementsViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return movements.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! MovementTableViewCell
+        cell.labelFechaServer.text = movements[indexPath.row].fecha
+        cell.labelImporteServer.text = movements[indexPath.row].importe
+        cell.labelTarjetaServer.text = movements[indexPath.row].tarjeta
+        
         
         return cell
     }

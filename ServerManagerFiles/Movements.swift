@@ -20,10 +20,9 @@ class Movements {
     var importe: String
     var ticket: String
     var ID_operacion: String
-    var response: Response
     
-    init(_ tarjeta: String,_ fecha: String,_ sucursal: String,_ afiliacion: String,_ terminal: String,_ operador: String,_ autorizacion: String,_ importe: String,_ ticket: String,_ ID_operacion: String, _ response: Response) {
-      self.tarjeta = tarjeta
+    init(_ tarjeta: String,_ fecha: String,_ sucursal: String,_ afiliacion: String,_ terminal: String,_ operador: String,_ autorizacion: String,_ importe: String,_ ticket: String,_ ID_operacion: String) {
+        self.tarjeta = tarjeta
         self.fecha = fecha
         self.sucursal = sucursal
         self.afiliacion = afiliacion
@@ -33,11 +32,9 @@ class Movements {
         self.importe = importe
         self.ticket = ticket
         self.ID_operacion = ID_operacion
-        self.response = response
     }
     
     func printMovement() {
-        response.printResponse()
         debugPrint(tarjeta)
         debugPrint(fecha)
         debugPrint(sucursal)
