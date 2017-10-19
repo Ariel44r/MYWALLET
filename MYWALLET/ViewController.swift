@@ -105,7 +105,7 @@ class ViewController: UIViewController {
     
     func recallSMSValidation(_ telefono: String) {
         let textAlertParameters = [
-            "titleHeader":"El código de validación es incorrecto, porfavor intenta nuevamente",
+            "titleHeader":"El código de validación es incorrecto, por favor intenta nuevamente",
             "messageBody":"Código de validación",
             "messageButton":"VALIDAR",
             ]

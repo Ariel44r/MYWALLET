@@ -76,8 +76,6 @@ extension MovementsViewController {
         cell.labelFechaServer.text = movements[indexPath.row].fecha
         cell.labelImporteServer.text = "$ \(movements[indexPath.row].importe)"
         cell.labelTarjetaServer.text = maskCardNumbers(movements[indexPath.row].tarjeta)
-        
-        
         return cell
     }
     
@@ -88,7 +86,10 @@ extension MovementsViewController {
 
 extension MovementsViewController {
     func maskCardNumbers(_ card: String) -> String {
-        var maskCard: String = "************"
+        var maskCard: String = ""
+        for _ in 0 ..< (card.count - 4) {
+            maskCard.insert("*", at: maskCard.endIndex)
+        }
         for index in (card.count - 4) ..< card.count {
             let indexChar = card.index(card.startIndex, offsetBy: index)
             maskCard.insert(card[indexChar], at: maskCard.endIndex)
