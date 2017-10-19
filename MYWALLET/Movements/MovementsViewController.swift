@@ -35,7 +35,7 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
             if let results = results {
                 //receivedResponseMovementsObject
                 self.responseMovements = results
-                self.labelSaldo.text = results.saldo
+                self.labelSaldoServer.text = "$ \(results.saldo)"
                 debugPrint("SALDO: \(results.saldo)")
             }
             if let resultsArray = resultsArray {
@@ -75,7 +75,7 @@ extension MovementsViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! MovementTableViewCell
         cell.labelFechaServer.text = movements[indexPath.row].fecha
-        cell.labelImporteServer.text = movements[indexPath.row].importe
+        cell.labelImporteServer.text = "$ \(movements[indexPath.row].importe)"
         cell.labelTarjetaServer.text = movements[indexPath.row].tarjeta
         
         
