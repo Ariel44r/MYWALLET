@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     let messageBody1 = "Teléfono"
     let messageButton1 = "INGRESAR"
     var dataFromServer: NSDictionary = [:]
+    var response: Response?
     let textAlertParameters2 = [
         "titleHeader":"Introduce el código de validación que recibiste vía SMS",
         "messageBody":"Código de validación",
@@ -83,7 +84,8 @@ class ViewController: UIViewController {
                         //after receive data from server
                         if self.validateResponseCode(results) {
                             let response = self.parseResponse(results)
-                            response.printResponse()
+                            //response.printResponse()
+                            self.response = response
                             if let codigoValidacion = smsParameters["CodigoValidacion"] {
                                 if codigoValidacion == codigoValidacionInput {
                                     //callFunctionToDownloadMovements
@@ -137,6 +139,13 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "movementsSegue" {
+            let movementsVC = segue.destination as! MovementsViewController
+            movementsVC.response = self.response!
+        }
     }
     
 }

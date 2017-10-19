@@ -10,6 +10,7 @@ import UIKit
 
 class MovementsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var response: Response?
     let reuseIdentifier = "movementsCell"
     
     
@@ -20,7 +21,8 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.response!.printResponse()
         // Do any additional setup after loading the view.
     }
 
