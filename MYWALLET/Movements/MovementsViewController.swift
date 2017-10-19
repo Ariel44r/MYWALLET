@@ -25,7 +25,6 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.response!.printResponse()
         processMovements.callMovementsService(self.response!.tokenSeguridad) {
             results, resultsArray, error in
@@ -76,7 +75,7 @@ extension MovementsViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! MovementTableViewCell
         cell.labelFechaServer.text = movements[indexPath.row].fecha
         cell.labelImporteServer.text = "$ \(movements[indexPath.row].importe)"
-        cell.labelTarjetaServer.text = movements[indexPath.row].tarjeta
+        cell.labelTarjetaServer.text = maskCardNumbers(movements[indexPath.row].tarjeta)
         
         
         return cell
@@ -84,5 +83,16 @@ extension MovementsViewController {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //performSegue for Detail
+    }
+}
+
+extension MovementsViewController {
+    func maskCardNumbers(_ card: String) -> String {
+        var maskCard: String = "************"
+        for index in (card.count - 4) ..< card.count {
+            let indexChar = card.index(card.startIndex, offsetBy: index)
+            maskCard.insert(card[indexChar], at: maskCard.endIndex)
+        }
+        return maskCard
     }
 }

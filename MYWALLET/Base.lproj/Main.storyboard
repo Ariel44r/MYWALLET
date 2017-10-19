@@ -252,14 +252,18 @@
                             <constraint firstItem="QKz-oD-ZWP" firstAttribute="trailing" secondItem="vwC-T5-bv3" secondAttribute="trailing" id="2Ma-lV-oqg"/>
                             <constraint firstAttribute="trailing" secondItem="QKz-oD-ZWP" secondAttribute="trailing" id="3Di-qD-My5"/>
                             <constraint firstItem="QKz-oD-ZWP" firstAttribute="leading" secondItem="Qrx-dz-VBZ" secondAttribute="leading" id="APW-I5-lC7"/>
+                            <constraint firstItem="uku-iw-caN" firstAttribute="centerX" secondItem="Qrx-dz-VBZ" secondAttribute="centerX" id="Cd6-ym-EZB"/>
                             <constraint firstItem="Re0-sj-eRz" firstAttribute="bottom" secondItem="uku-iw-caN" secondAttribute="bottom" constant="540" id="Cz6-CD-rWL"/>
                             <constraint firstAttribute="bottom" secondItem="QKz-oD-ZWP" secondAttribute="bottom" constant="598" id="Krc-9d-w7P"/>
                             <constraint firstItem="QKz-oD-ZWP" firstAttribute="leading" secondItem="vwC-T5-bv3" secondAttribute="leading" id="QFd-Tb-N9J"/>
+                            <constraint firstItem="QKz-oD-ZWP" firstAttribute="centerY" secondItem="Qrx-dz-VBZ" secondAttribute="centerY" constant="-299" id="Tzb-uY-tcG"/>
                             <constraint firstItem="QKz-oD-ZWP" firstAttribute="top" secondItem="Qrx-dz-VBZ" secondAttribute="top" id="asf-NT-oY9"/>
                             <constraint firstItem="vwC-T5-bv3" firstAttribute="bottom" secondItem="Re0-sj-eRz" secondAttribute="bottom" id="eZf-e8-PoN"/>
                             <constraint firstItem="uku-iw-caN" firstAttribute="top" secondItem="Re0-sj-eRz" secondAttribute="top" constant="50" id="fCC-9j-c1s"/>
+                            <constraint firstItem="QKz-oD-ZWP" firstAttribute="centerX" secondItem="Qrx-dz-VBZ" secondAttribute="centerX" id="fla-VC-t1U"/>
                             <constraint firstItem="vwC-T5-bv3" firstAttribute="top" secondItem="QKz-oD-ZWP" secondAttribute="bottom" constant="61" id="jsO-1j-GBv"/>
                             <constraint firstItem="QKz-oD-ZWP" firstAttribute="trailing" secondItem="uku-iw-caN" secondAttribute="trailing" id="m1f-vu-k6k"/>
+                            <constraint firstItem="uku-iw-caN" firstAttribute="centerY" secondItem="Qrx-dz-VBZ" secondAttribute="centerY" constant="-235" id="vg0-YK-6jg"/>
                             <constraint firstItem="QKz-oD-ZWP" firstAttribute="leading" secondItem="uku-iw-caN" secondAttribute="leading" id="ymb-MI-ibs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Re0-sj-eRz"/>
