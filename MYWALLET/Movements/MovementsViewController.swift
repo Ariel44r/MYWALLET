@@ -10,19 +10,16 @@ import UIKit
 
 class MovementsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    //MARK: variablesAndInstances
     var response: Response?
     let reuseIdentifier = "movementsCell"
-    
-    
-    
-    
-    
-    
+    let processMovements = ProcessMovements()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.response!.printResponse()
+        processMovements.callMovementsService(self.response!.tokenSeguridad)
         // Do any additional setup after loading the view.
     }
 
