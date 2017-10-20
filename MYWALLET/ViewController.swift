@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     
     func callLoginService(_ phone: String) {
         let loginParametersDict = ["Telefono": phone]
-        let stringURL = "http://209.222.19.75/wsAutorizador/api/autorizador/AUTORIZADOR_ValidaUsuario/"
+        let stringURL = Constants.Servers.URL_SERVER + "autorizador/AUTORIZADOR_ValidaUsuario/"
         serverManager.postRequest(loginParametersDict, stringURL) {
             results, error in
             if let error = error {
