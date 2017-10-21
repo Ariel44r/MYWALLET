@@ -12,7 +12,6 @@
 		4F4952021F981114007EFFBB /* MovementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4952011F981114007EFFBB /* MovementsViewController.swift */; };
 		4F4952051F9811C1007EFFBB /* MovementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4952041F9811C1007EFFBB /* MovementTableViewCell.swift */; };
 		4F4952071F981395007EFFBB /* ProcessMovements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4952061F981395007EFFBB /* ProcessMovements.swift */; };
-		4F7D902D1F9AA24600D3A5DB /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7D902C1F9AA24600D3A5DB /* DataBaseManager.swift */; };
 		4F7D90311F9AAB3500D3A5DB /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7D90301F9AAB3500D3A5DB /* utils.swift */; };
 		4F844D9A1F93F2EF005C8662 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F844D991F93F2EF005C8662 /* AppDelegate.swift */; };
 		4F844D9C1F93F2EF005C8662 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F844D9B1F93F2EF005C8662 /* ViewController.swift */; };
@@ -48,7 +47,6 @@
 		4F4952011F981114007EFFBB /* MovementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementsViewController.swift; sourceTree = "<group>"; };
 		4F4952041F9811C1007EFFBB /* MovementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementTableViewCell.swift; sourceTree = "<group>"; };
 		4F4952061F981395007EFFBB /* ProcessMovements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessMovements.swift; sourceTree = "<group>"; };
-		4F7D902C1F9AA24600D3A5DB /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		4F7D90301F9AAB3500D3A5DB /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 		4F844D961F93F2EF005C8662 /* MYWALLET.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYWALLET.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F844D991F93F2EF005C8662 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,14 +100,6 @@
 			path = Movements;
 			sourceTree = "<group>";
 		};
-		4F7D902E1F9AA24E00D3A5DB /* DataBase */ = {
-			isa = PBXGroup;
-			children = (
-				4F7D902C1F9AA24600D3A5DB /* DataBaseManager.swift */,
-			);
-			path = DataBase;
-			sourceTree = "<group>";
-		};
 		4F7D902F1F9AAB0D00D3A5DB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +111,6 @@
 		4F844D8D1F93F2EF005C8662 = {
 			isa = PBXGroup;
 			children = (
-				4F7D902E1F9AA24E00D3A5DB /* DataBase */,
 				4FB1F7301F943054007D8644 /* ServerManagerFiles */,
 				4F844D981F93F2EF005C8662 /* MYWALLET */,
 				4F844DAD1F93F2EF005C8662 /* MYWALLETTests */,
@@ -323,7 +312,6 @@
 				4FCBBDEB1F96C36700B8475C /* Response.swift in Sources */,
 				4F4952001F980CC4007EFFBB /* Movements.swift in Sources */,
 				4F09BC4B1F98570900701C53 /* ResponseMovements.swift in Sources */,
-				4F7D902D1F9AA24600D3A5DB /* DataBaseManager.swift in Sources */,
 				4F844D9C1F93F2EF005C8662 /* ViewController.swift in Sources */,
 				4F4952021F981114007EFFBB /* MovementsViewController.swift in Sources */,
 				4F844DC81F93F321005C8662 /* ServerManager.swift in Sources */,

@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var headerLabel: UILabel!
     
     @IBAction func loginButton(_ sender: Any) {
+        headerLabel.text = "Login"
         displayFieldTextAlert(titleHeader1, messageBody1, messageButton1) {
             results, error in
             if let error = error {

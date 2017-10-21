@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03CC28F48D44B86314951CFE4C86A922 /* Pods-MYWALLET-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D27213489D6FADEA38DE5B1B62D05E98 /* Pods-MYWALLET-dummy.m */; };
+		27BD9C255FF509964DADFFDDD00C988E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		3465722842DF0131536DA3332F2B0300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		943EA827322D46CD43D2F664B4CEA0F5 /* Pods-MyWalletNotifications-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B260B578E9F32CAA58D5C987AFF5B9F5 /* Pods-MyWalletNotifications-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0107E81959F737611A31E5671A94C47B /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = iOS_SDK/OneSignalSDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
+		2CB86FBD7F910DC43C1D964FB2D42959 /* libPods-MYWALLET.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MYWALLET.a"; path = "libPods-MYWALLET.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		41F99FE285E667902EE80AA0838D5FE1 /* Pods-MyWalletNotifications-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MyWalletNotifications-acknowledgements.markdown"; sourceTree = "<group>"; };
+		469B08D7845457CBD2C1550FA0969718 /* Pods-MyWalletNotifications.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyWalletNotifications.release.xcconfig"; sourceTree = "<group>"; };
+		487D7A2189FB1DF8FE35B5F3B6227C53 /* Pods-MyWalletNotifications-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyWalletNotifications-resources.sh"; sourceTree = "<group>"; };
+		58BD080D2618FC29145DA89A9BF663B7 /* Pods-MYWALLET-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MYWALLET-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7311EEFCAB1E5D2EC35A1D0A64305D32 /* Pods-MYWALLET-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MYWALLET-resources.sh"; sourceTree = "<group>"; };
+		81C8F5CD9219C69FB6B656F07786BAE3 /* libPods-MyWalletNotifications.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MyWalletNotifications.a"; path = "libPods-MyWalletNotifications.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93DD5A398423C4B9DA3E09AEDCEB5083 /* Pods-MYWALLET.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MYWALLET.release.xcconfig"; sourceTree = "<group>"; };
+		A1F2E1DDE8B1A9F1E1B614FAF3537A5E /* Pods-MyWalletNotifications-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyWalletNotifications-acknowledgements.plist"; sourceTree = "<group>"; };
+		A706C5BBA24AFEE203316F2BE689CCDD /* Pods-MyWalletNotifications.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyWalletNotifications.debug.xcconfig"; sourceTree = "<group>"; };
+		B260B578E9F32CAA58D5C987AFF5B9F5 /* Pods-MyWalletNotifications-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MyWalletNotifications-dummy.m"; sourceTree = "<group>"; };
+		B585AEEC4F43C69556757696E08E0A7A /* Pods-MYWALLET-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MYWALLET-acknowledgements.plist"; sourceTree = "<group>"; };
+		CF6C71C4E90637C9D333DC74C60EC8FC /* Pods-MYWALLET-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MYWALLET-frameworks.sh"; sourceTree = "<group>"; };
+		D27213489D6FADEA38DE5B1B62D05E98 /* Pods-MYWALLET-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MYWALLET-dummy.m"; sourceTree = "<group>"; };
+		E279F7F40A98F99D07E5B7342D7E4A2C /* Pods-MYWALLET.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MYWALLET.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F8D098B5885FC68D07533449FA120A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3465722842DF0131536DA3332F2B0300 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA8780D564DCAE272D9E272FC0F710E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27BD9C255FF509964DADFFDDD00C988E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31024DDD121568A44F4DC265C15F4D16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0107E81959F737611A31E5671A94C47B /* OneSignal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54F1C2B790D076A1DFBCEA466D0C7F62 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6FDE97F84FE5BDA6AA682D8FF802BA3C /* Pods-MYWALLET */,
+				D4C68285CCB6C0C41FA9DEDC057454FB /* Pods-MyWalletNotifications */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6202124E9D433C3EA7B1CF2F09917CA5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B109A558AEC0464E1C8AD13A3517ECA8 /* OneSignal */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6FDE97F84FE5BDA6AA682D8FF802BA3C /* Pods-MYWALLET */ = {
+			isa = PBXGroup;
+			children = (
+				58BD080D2618FC29145DA89A9BF663B7 /* Pods-MYWALLET-acknowledgements.markdown */,
+				B585AEEC4F43C69556757696E08E0A7A /* Pods-MYWALLET-acknowledgements.plist */,
+				D27213489D6FADEA38DE5B1B62D05E98 /* Pods-MYWALLET-dummy.m */,
+				CF6C71C4E90637C9D333DC74C60EC8FC /* Pods-MYWALLET-frameworks.sh */,
+				7311EEFCAB1E5D2EC35A1D0A64305D32 /* Pods-MYWALLET-resources.sh */,
+				E279F7F40A98F99D07E5B7342D7E4A2C /* Pods-MYWALLET.debug.xcconfig */,
+				93DD5A398423C4B9DA3E09AEDCEB5083 /* Pods-MYWALLET.release.xcconfig */,
+			);
+			name = "Pods-MYWALLET";
+			path = "Target Support Files/Pods-MYWALLET";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				6202124E9D433C3EA7B1CF2F09917CA5 /* Pods */,
+				CCA794483317D86CAE261EA2C9154FC5 /* Products */,
+				54F1C2B790D076A1DFBCEA466D0C7F62 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B109A558AEC0464E1C8AD13A3517ECA8 /* OneSignal */ = {
+			isa = PBXGroup;
+			children = (
+				31024DDD121568A44F4DC265C15F4D16 /* Frameworks */,
+			);
+			name = OneSignal;
+			path = OneSignal;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCA794483317D86CAE261EA2C9154FC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CB86FBD7F910DC43C1D964FB2D42959 /* libPods-MYWALLET.a */,
+				81C8F5CD9219C69FB6B656F07786BAE3 /* libPods-MyWalletNotifications.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D4C68285CCB6C0C41FA9DEDC057454FB /* Pods-MyWalletNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				41F99FE285E667902EE80AA0838D5FE1 /* Pods-MyWalletNotifications-acknowledgements.markdown */,
+				A1F2E1DDE8B1A9F1E1B614FAF3537A5E /* Pods-MyWalletNotifications-acknowledgements.plist */,
+				B260B578E9F32CAA58D5C987AFF5B9F5 /* Pods-MyWalletNotifications-dummy.m */,
+				487D7A2189FB1DF8FE35B5F3B6227C53 /* Pods-MyWalletNotifications-resources.sh */,
+				A706C5BBA24AFEE203316F2BE689CCDD /* Pods-MyWalletNotifications.debug.xcconfig */,
+				469B08D7845457CBD2C1550FA0969718 /* Pods-MyWalletNotifications.release.xcconfig */,
+			);
+			name = "Pods-MyWalletNotifications";
+			path = "Target Support Files/Pods-MyWalletNotifications";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4FBB5688BC346B376F865DED26D5D8AB /* Pods-MyWalletNotifications */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C866DC64736BA757538777C51B3F7CCD /* Build configuration list for PBXNativeTarget "Pods-MyWalletNotifications" */;
+			buildPhases = (
+				7C7E18D572927348CE0F39A7BE40E5A0 /* Sources */,
+				2F8D098B5885FC68D07533449FA120A5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MyWalletNotifications";
+			productName = "Pods-MyWalletNotifications";
+			productReference = 81C8F5CD9219C69FB6B656F07786BAE3 /* libPods-MyWalletNotifications.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C609A3DE01F7F554902E354C6F6CD2FC /* Pods-MYWALLET */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04DD1513E62CDFF8717D089BB24F4BB2 /* Build configuration list for PBXNativeTarget "Pods-MYWALLET" */;
+			buildPhases = (
+				FB2CC7CA9D850E4DC00DFBA0B63CD0B8 /* Sources */,
+				FA8780D564DCAE272D9E272FC0F710E6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MYWALLET";
+			productName = "Pods-MYWALLET";
+			productReference = 2CB86FBD7F910DC43C1D964FB2D42959 /* libPods-MYWALLET.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA794483317D86CAE261EA2C9154FC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C609A3DE01F7F554902E354C6F6CD2FC /* Pods-MYWALLET */,
+				4FBB5688BC346B376F865DED26D5D8AB /* Pods-MyWalletNotifications */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7C7E18D572927348CE0F39A7BE40E5A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				943EA827322D46CD43D2F664B4CEA0F5 /* Pods-MyWalletNotifications-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB2CC7CA9D850E4DC00DFBA0B63CD0B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03CC28F48D44B86314951CFE4C86A922 /* Pods-MYWALLET-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		03428F6C2B19C7F09B59EEF81A5DA686 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93DD5A398423C4B9DA3E09AEDCEB5083 /* Pods-MYWALLET.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		094173F6E4CE1AF33AF97171ED87502A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E279F7F40A98F99D07E5B7342D7E4A2C /* Pods-MYWALLET.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0DFD316F1EFFBDE831AA27BE19131288 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		604EB7786881FBAD3F3C4D32B539C9BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A706C5BBA24AFEE203316F2BE689CCDD /* Pods-MyWalletNotifications.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B434E84AC9A795F2D6CD6F6B31181B9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FF1BD9BA7EC19078F1D44D0395420EED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 469B08D7845457CBD2C1550FA0969718 /* Pods-MyWalletNotifications.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04DD1513E62CDFF8717D089BB24F4BB2 /* Build configuration list for PBXNativeTarget "Pods-MYWALLET" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				094173F6E4CE1AF33AF97171ED87502A /* Debug */,
+				03428F6C2B19C7F09B59EEF81A5DA686 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B434E84AC9A795F2D6CD6F6B31181B9B /* Debug */,
+				0DFD316F1EFFBDE831AA27BE19131288 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C866DC64736BA757538777C51B3F7CCD /* Build configuration list for PBXNativeTarget "Pods-MyWalletNotifications" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				604EB7786881FBAD3F3C4D32B539C9BA /* Debug */,
+				FF1BD9BA7EC19078F1D44D0395420EED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
