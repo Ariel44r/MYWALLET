@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol MovementsViewControllerDelegate: class {
+    func logOut()
+}
+
 class MovementsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     //MARK: variablesAndInstances
@@ -16,6 +20,7 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
     let processMovements = ProcessMovements()
     var movements = [Movements]()
     var responseMovements: ResponseMovements?
+    weak var delegate: MovementsViewControllerDelegate?
     
     //MARK: OutletsAndActions
     @IBOutlet weak var movementsTableView: UITableView!
@@ -26,6 +31,7 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBAction func logOutButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         DataPersistence.removeUserPreferences()
+        self.delegate?.logOut()
     }
     
     override func viewDidLoad() {

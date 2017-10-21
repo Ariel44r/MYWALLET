@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,  MovementsViewControllerDelegate {
 
     //MARK: variablesAndInstances
     let serverManager = ServerManager()
@@ -18,8 +18,20 @@ class ViewController: UIViewController {
     var dataFromServer: NSDictionary = [:]
     var response: Response?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        let dataPersistence = DataPersistence.checkIfUserIsLoged()
+        if dataPersistence.isLoged {
+            buttonOutlet.setTitle("Tap for Movements", for: .normal)
+        } else {
+            buttonOutlet.setTitle("Login", for: .normal)
+        }
+    }
+    
     //mark: outletsAndActions
     @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var buttonOutlet: UIButton!
     
     @IBAction func loginButton(_ sender: Any) {
         let dataPersistence = DataPersistence.checkIfUserIsLoged()
@@ -118,12 +130,6 @@ class ViewController: UIViewController {
         return response
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -133,7 +139,13 @@ class ViewController: UIViewController {
         if segue.identifier == "movementsSegue" {
             let movementsVC = segue.destination as! MovementsViewController
             movementsVC.response = self.response!
+            movementsVC.delegate = self
         }
+    }
+    
+    //MARK: Delegate
+    func logOut() {
+        buttonOutlet.setTitle("Login", for: .normal)
     }
     
 }

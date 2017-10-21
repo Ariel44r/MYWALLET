@@ -54,7 +54,7 @@
                                             <constraint firstAttribute="height" constant="30" id="bgt-Qd-6lT"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Ingresar">
+                                        <state key="normal">
                                             <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -87,6 +87,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="buttonOutlet" destination="YDX-vg-vSh" id="QWN-bU-6TX"/>
                         <outlet property="headerLabel" destination="bf0-su-4GA" id="Sb6-Qz-fIa"/>
                         <segue destination="TP9-tc-AMU" kind="modal" identifier="movementsSegue" modalTransitionStyle="flipHorizontal" id="gHu-F6-HDJ"/>
                     </connections>
@@ -180,7 +181,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="375" height="110"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zyC-vS-fvZ" id="4vG-4I-rFO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hik-2D-kRP">
