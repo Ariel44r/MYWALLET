@@ -22,14 +22,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var headerLabel: UILabel!
     
     @IBAction func loginButton(_ sender: Any) {
-        headerLabel.text = "Login"
-        displayFieldTextAlert(titleHeader1, messageBody1, messageButton1) {
-            results, error in
-            if let error = error {
-                debugPrint("Error: \(error)")
-            }
-            if let results = results {
-                self.callLoginService(results)
+        let dataPersistence = DataPersistence.checkIfUserIsLoged()
+        if dataPersistence.isLoged == true {
+            self.response = dataPersistence.response
+            self.performSegue(withIdentifier: "movementsSegue", sender: nil)
+        } else {
+            headerLabel.text = "Login"
+            displayFieldTextAlert(titleHeader1, messageBody1, messageButton1) {
+                results, error in
+                if let error = error {
+                    debugPrint("Error: \(error)")
+                }
+                if let results = results {
+                    self.callLoginService(results)
+                }
             }
         }
     }
@@ -73,15 +79,16 @@ class ViewController: UIViewController {
                             let response = self.parseResponse(results)
                             //response.printResponse()
                             self.response = response
+                            //sendDataToPreferences
+                            DataPersistence.saveUserPreferences(response)
                             let codigoValidacion = "123456"
-                                if codigoValidacion == codigoValidacionInput {
-                                    //callFunctionToDownloadMovements
-                                    debugPrint("DEPLOY MOVEMENTS")
-                                    self.performSegue(withIdentifier: "movementsSegue", sender: nil)
-                                }
-                                else {
-                                    self.recallSMSValidation(phone)
-                                }
+                            if codigoValidacion == codigoValidacionInput {
+                                //callFunctionToDownloadMovements
+                                self.performSegue(withIdentifier: "movementsSegue", sender: nil)
+                            }
+                            else {
+                                self.recallSMSValidation(phone)
+                            }
                         }
                     }
                 }
@@ -114,6 +121,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     override func didReceiveMemoryWarning() {

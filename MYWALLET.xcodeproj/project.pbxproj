@@ -22,6 +22,7 @@
 		4F844DBA1F93F2EF005C8662 /* MYWALLETUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F844DB91F93F2EF005C8662 /* MYWALLETUITests.swift */; };
 		4F844DC81F93F321005C8662 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F844DC71F93F321005C8662 /* ServerManager.swift */; };
 		4FCBBDEB1F96C36700B8475C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCBBDEA1F96C36700B8475C /* Response.swift */; };
+		4FE3CB101F9B79A700C12839 /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE3CB0F1F9B79A700C12839 /* DataPersistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		4F844DBB1F93F2EF005C8662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F844DC71F93F321005C8662 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
 		4FCBBDEA1F96C36700B8475C /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		4FE3CB0F1F9B79A700C12839 /* DataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		4F844D981F93F2EF005C8662 /* MYWALLET */ = {
 			isa = PBXGroup;
 			children = (
+				4FE3CB111F9B7A7200C12839 /* DataPersistenceUserDefaults */,
 				4F7D902F1F9AAB0D00D3A5DB /* Utils */,
 				4F844D991F93F2EF005C8662 /* AppDelegate.swift */,
 				4F844D9B1F93F2EF005C8662 /* ViewController.swift */,
@@ -171,6 +174,14 @@
 				4F4951FF1F980CC4007EFFBB /* Movements.swift */,
 			);
 			path = ServerManagerFiles;
+			sourceTree = "<group>";
+		};
+		4FE3CB111F9B7A7200C12839 /* DataPersistenceUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				4FE3CB0F1F9B79A700C12839 /* DataPersistence.swift */,
+			);
+			path = DataPersistenceUserDefaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +321,7 @@
 				4F4952051F9811C1007EFFBB /* MovementTableViewCell.swift in Sources */,
 				4F7D90311F9AAB3500D3A5DB /* utils.swift in Sources */,
 				4FCBBDEB1F96C36700B8475C /* Response.swift in Sources */,
+				4FE3CB101F9B79A700C12839 /* DataPersistence.swift in Sources */,
 				4F4952001F980CC4007EFFBB /* Movements.swift in Sources */,
 				4F09BC4B1F98570900701C53 /* ResponseMovements.swift in Sources */,
 				4F844D9C1F93F2EF005C8662 /* ViewController.swift in Sources */,

@@ -88,7 +88,7 @@
                     </view>
                     <connections>
                         <outlet property="headerLabel" destination="bf0-su-4GA" id="Sb6-Qz-fIa"/>
-                        <segue destination="TP9-tc-AMU" kind="show" identifier="movementsSegue" id="gHu-F6-HDJ"/>
+                        <segue destination="TP9-tc-AMU" kind="modal" identifier="movementsSegue" modalTransitionStyle="flipHorizontal" id="gHu-F6-HDJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -117,19 +117,30 @@
                                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Wallet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pni-0F-FEQ">
-                                                <rect key="frame" x="16" y="0.0" width="351" height="31"/>
+                                                <rect key="frame" x="100" y="0.0" width="182" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWL-lv-nZv">
+                                                <rect key="frame" x="312" y="1" width="55" height="30"/>
+                                                <state key="normal" title="Log Out">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="logOutButton:" destination="TP9-tc-AMU" eventType="touchUpInside" id="sb1-Bi-Bwy"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="Pni-0F-FEQ" firstAttribute="leading" secondItem="3l5-jg-XLM" secondAttribute="leading" constant="16" id="NLr-uS-vFK"/>
+                                            <constraint firstItem="Pni-0F-FEQ" firstAttribute="leading" secondItem="3l5-jg-XLM" secondAttribute="leading" constant="100" id="NLr-uS-vFK"/>
                                             <constraint firstAttribute="height" constant="44" id="Nhj-FJ-KJf"/>
                                             <constraint firstItem="Pni-0F-FEQ" firstAttribute="centerY" secondItem="3l5-jg-XLM" secondAttribute="centerY" constant="-6.5" id="bnR-UI-LkO"/>
                                             <constraint firstItem="Pni-0F-FEQ" firstAttribute="top" secondItem="3l5-jg-XLM" secondAttribute="top" id="gQR-ra-zvZ"/>
-                                            <constraint firstItem="Pni-0F-FEQ" firstAttribute="trailing" secondItem="3l5-jg-XLM" secondAttribute="trailingMargin" id="p2F-hg-wvf"/>
+                                            <constraint firstItem="Pni-0F-FEQ" firstAttribute="trailing" secondItem="3l5-jg-XLM" secondAttribute="trailingMargin" constant="-85" id="p2F-hg-wvf"/>
+                                            <constraint firstAttribute="trailing" secondItem="AWL-lv-nZv" secondAttribute="trailing" constant="8" id="spD-JI-Yxh"/>
+                                            <constraint firstAttribute="bottom" secondItem="AWL-lv-nZv" secondAttribute="bottom" constant="13" id="w9O-ce-uxo"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uku-iw-caN">
@@ -265,6 +276,7 @@
                                     <constraint firstItem="RAw-lZ-ULR" firstAttribute="leading" secondItem="vec-MF-k7m" secondAttribute="leading" id="JLn-Gd-1Sw"/>
                                     <constraint firstItem="uku-iw-caN" firstAttribute="width" secondItem="vec-MF-k7m" secondAttribute="width" id="LKE-fh-Ow2"/>
                                     <constraint firstItem="uku-iw-caN" firstAttribute="centerX" secondItem="vec-MF-k7m" secondAttribute="centerX" id="M2T-ne-kh1"/>
+                                    <constraint firstItem="AWL-lv-nZv" firstAttribute="top" secondItem="RAw-lZ-ULR" secondAttribute="bottom" constant="1" id="RBX-HV-8FJ"/>
                                     <constraint firstItem="3l5-jg-XLM" firstAttribute="leading" secondItem="vec-MF-k7m" secondAttribute="leading" id="WcK-wp-vVD"/>
                                     <constraint firstItem="vwC-T5-bv3" firstAttribute="leading" secondItem="vec-MF-k7m" secondAttribute="leading" id="dxE-66-lKd"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vwC-T5-bv3" secondAttribute="trailing" id="hfx-JW-JET"/>

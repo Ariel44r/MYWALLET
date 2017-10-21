@@ -17,11 +17,16 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
     var movements = [Movements]()
     var responseMovements: ResponseMovements?
     
-    //MARK: Outlets
+    //MARK: OutletsAndActions
     @IBOutlet weak var movementsTableView: UITableView!
     @IBOutlet weak var labelMyWallet: UILabel!
     @IBOutlet weak var labelSaldoServer: UILabel!
     @IBOutlet weak var labelSaldo: UILabel!
+    
+    @IBAction func logOutButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        DataPersistence.removeUserPreferences()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
