@@ -15,9 +15,7 @@ class ProcessMovements {
     let serverManager = ServerManager()
     
     func callMovementsService(_ tokenSeguridad: String, _ completion: @escaping (_ results: ResponseMovements?,_ resultsArray: [Movements]?, _ error: Error?) -> Void) {
-        let movementsParameterDict = ["TokenSeguridad":tokenSeguridad]
-        let stringURL = "http://209.222.19.75/wsAutorizador/api/autorizador/AUTORIZADOR_GetSaldosMovimientos"
-        serverManager.postRequest(movementsParameterDict, stringURL) {
+        serverManager.postRequest("MOVEMENTS","TokenSeguridad",tokenSeguridad) {
             results, error in
             if let error = error {
                 debugPrint("Error: \(error)")

@@ -12,16 +12,11 @@ class ViewController: UIViewController {
 
     //MARK: variablesAndInstances
     let serverManager = ServerManager()
-    let titleHeader1 = "Para vincular la aplicacion a tu cuenta por favor introduce tu número telefónico"
-    let messageBody1 = "Teléfono"
-    let messageButton1 = "INGRESAR"
+    let titleHeader1 = Constants.textAlertParam.HEADER1
+    let messageBody1 = Constants.textAlertParam.MESSAGEBODDY1
+    let messageButton1 = Constants.textAlertParam.MESSAGEBUTTON1
     var dataFromServer: NSDictionary = [:]
     var response: Response?
-    let textAlertParameters2 = [
-        "titleHeader":"Introduce el código de validación que recibiste vía SMS",
-        "messageBody":"Código de validación",
-        "messageButton":"VALIDAR",
-    ]
     
     //mark: outletsAndActions
     @IBOutlet weak var headerLabel: UILabel!
@@ -40,9 +35,7 @@ class ViewController: UIViewController {
     }
     
     func callLoginService(_ phone: String) {
-        let loginParametersDict = ["Telefono": phone]
-        let stringURL = Constants.Servers.URL_SERVER + "autorizador/AUTORIZADOR_ValidaUsuario/"
-        serverManager.postRequest(loginParametersDict, stringURL) {
+        serverManager.postRequest("LOGIN","Telefono",phone) {
             results, error in
             if let error = error {
                 debugPrint("Error: \(error)")
@@ -51,21 +44,14 @@ class ViewController: UIViewController {
             if let results = results {
                 self.dataFromServer = results
                 if self.validateResponseCode(self.dataFromServer) {
-                    self.callSMSValidationService(phone, self.textAlertParameters2)
+                    self.callSMSValidationService(phone, Constants.textAlertParam.TEXTALERTPARAM2)
                 }
             }
         }
     }
     
-    func callSMSValidationService(_ telefono: String, _ textAletrParameters: [String: String]) {
+    func callSMSValidationService(_ phone: String, _ textAletrParameters: [String: String]) {
         headerLabel.text = "Validación SMS"
-        let smsParameters = [
-            "Telefono":telefono,
-            "OneSignalUserID":"1234",
-            "OneSignalRegistrationID":"1234",
-            "CodigoValidacion":"123456"
-        ]
-        let stringURL = "http://209.222.19.75/wsAutorizador/api/autorizador/AUTORIZADOR_ValidacionSMS"
         var codigoValidacionInput: String?
         displayFieldTextAlert(textAletrParameters["titleHeader"]!, textAletrParameters["messageBody"]!, textAletrParameters["messageButton"]!) {
             results, error in
@@ -75,7 +61,7 @@ class ViewController: UIViewController {
             if let results = results {
                 debugPrint(results)
                 codigoValidacionInput = results
-                self.serverManager.postRequest(smsParameters, stringURL) {
+                self.serverManager.postRequest("SMS","Telefono",phone) {
                     results, error in
                     if let error = error {
                         debugPrint("Error from server: \(error)")
@@ -87,16 +73,15 @@ class ViewController: UIViewController {
                             let response = self.parseResponse(results)
                             //response.printResponse()
                             self.response = response
-                            if let codigoValidacion = smsParameters["CodigoValidacion"] {
+                            let codigoValidacion = "123456"
                                 if codigoValidacion == codigoValidacionInput {
                                     //callFunctionToDownloadMovements
                                     debugPrint("DEPLOY MOVEMENTS")
                                     self.performSegue(withIdentifier: "movementsSegue", sender: nil)
                                 }
                                 else {
-                                    self.recallSMSValidation(telefono)
+                                    self.recallSMSValidation(phone)
                                 }
-                            }
                         }
                     }
                 }
@@ -105,18 +90,12 @@ class ViewController: UIViewController {
     }
     
     func recallSMSValidation(_ telefono: String) {
-        let textAlertParameters = [
-            "titleHeader":"El código de validación es incorrecto, por favor intenta nuevamente",
-            "messageBody":"Código de validación",
-            "messageButton":"VALIDAR",
-            ]
-        self.callSMSValidationService(telefono, textAlertParameters)
+        self.callSMSValidationService(telefono, Constants.textAlertParam.TEXTALERTPARAMETERSINCORRECT)
     }
     
     //validateResponseCode
     func validateResponseCode(_ dataFromServer: NSDictionary) -> Bool {
-        if let CodigoRespuesta = dataFromServer["CodigoRespuesta"] as? String {
-            debugPrint("CODIGO DE RESPUESTA: \(CodigoRespuesta)")
+        if let _ = dataFromServer["CodigoRespuesta"] as? String {
             return true
         }
         return false
@@ -183,7 +162,7 @@ extension ViewController {
                     completion(textFieldUnwrapped, nil)
                 })
             } else if textField!.text! == "" {
-                self.displaySimpleAlert("Aviso", "Aun no ha ingresado el número, por favor intente otra vez", "Ok")
+                self.displaySimpleAlert(Constants.textAlertParam.SIMPLEALERTH,Constants.textAlertParam.SIMPLEALERTB, Constants.textAlertParam.SIMPLEALERTBUT)
             }
         }))
         //Present the alert.
