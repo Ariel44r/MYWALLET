@@ -32,7 +32,7 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
     //mark: outletsAndActions
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var buttonOutlet: UIButton!
-    
+
     @IBAction func loginButton(_ sender: Any) {
         let dataPersistence = DataPersistence.checkIfUserIsLoged()
         if dataPersistence.isLoged == true {
@@ -93,7 +93,7 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
                             self.response = response
                             //sendDataToPreferences
                             DataPersistence.saveUserPreferences(response)
-                            let codigoValidacion = "123456"
+                            let codigoValidacion = Constants.ServerParameters.SMS["CodigoValidacion"]
                             if codigoValidacion == codigoValidacionInput {
                                 //callFunctionToDownloadMovements
                                 self.performSegue(withIdentifier: "movementsSegue", sender: nil)
