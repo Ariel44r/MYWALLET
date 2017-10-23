@@ -27,6 +27,7 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var labelMyWallet: UILabel!
     @IBOutlet weak var labelSaldoServer: UILabel!
     @IBOutlet weak var labelSaldo: UILabel!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     @IBAction func logOutButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -36,6 +37,7 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicatorView.startAnimating()
         self.response!.printResponse()
         processMovements.callMovementsService(self.response!.tokenSeguridad) {
             results, resultsArray, error in
@@ -52,6 +54,7 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
                 //receivedMovementsArray
                 self.movements = resultsArray
                 self.movementsTableView.reloadData()
+                self.activityIndicatorView.stopAnimating()
                 debugPrint("Tarjeta: \(resultsArray[0].tarjeta)")
             }
         }

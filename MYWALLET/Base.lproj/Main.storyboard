@@ -61,6 +61,10 @@
                                             <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QjS-Oe-tQf"/>
                                         </connections>
                                     </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bwU-ac-spb">
+                                        <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.50342465753424659" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -87,6 +91,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="bwU-ac-spb" id="gxf-dR-U8M"/>
                         <outlet property="buttonOutlet" destination="YDX-vg-vSh" id="QWN-bU-6TX"/>
                         <outlet property="headerLabel" destination="bf0-su-4GA" id="Sb6-Qz-fIa"/>
                         <segue destination="TP9-tc-AMU" kind="modal" identifier="movementsSegue" modalTransitionStyle="flipHorizontal" id="gHu-F6-HDJ"/>
@@ -159,6 +164,10 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="E6T-Ra-fWQ">
+                                                <rect key="frame" x="177" y="18" width="20" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.50342465749999998" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -298,6 +307,7 @@
                         <viewLayoutGuide key="safeArea" id="iZi-Va-HBV"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="E6T-Ra-fWQ" id="26z-f4-qde"/>
                         <outlet property="labelSaldoServer" destination="e2g-hc-ISk" id="eI9-jS-9vE"/>
                         <outlet property="movementsTableView" destination="vwC-T5-bv3" id="Zl0-Of-DA7"/>
                     </connections>

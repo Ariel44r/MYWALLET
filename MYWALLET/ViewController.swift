@@ -32,7 +32,8 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
     //mark: outletsAndActions
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var buttonOutlet: UIButton!
-
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     @IBAction func loginButton(_ sender: Any) {
         let dataPersistence = DataPersistence.checkIfUserIsLoged()
         if dataPersistence.isLoged == true {
@@ -53,6 +54,7 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
     }
     
     func callLoginService(_ phone: String) {
+        activityIndicator.startAnimating()
         serverManager.postRequest("LOGIN","Telefono",phone) {
             results, error in
             if let error = error {
@@ -60,6 +62,7 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
                 return
             }
             if let results = results {
+                self.activityIndicator.stopAnimating()
                 self.dataFromServer = results
                 if self.validateResponseCode(self.dataFromServer) {
                     self.callSMSValidationService(phone, Constants.textAlertParam.TEXTALERTPARAM2)
@@ -79,6 +82,7 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
             if let results = results {
                 debugPrint(results)
                 codigoValidacionInput = results
+                self.activityIndicator.startAnimating()
                 self.serverManager.postRequest("SMS","Telefono",phone) {
                     results, error in
                     if let error = error {
@@ -86,6 +90,7 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
                         return
                     }
                     if let results = results {
+                        self.activityIndicator.stopAnimating()
                         //after receive data from server
                         if self.validateResponseCode(results) {
                             let response = self.parseResponse(results)
