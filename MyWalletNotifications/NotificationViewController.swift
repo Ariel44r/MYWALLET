@@ -1,26 +1,32 @@
-//
-//  NotificationViewController.swift
-//  MyWalletNotifications
-//
-//  Created by Ariel Ramírez on 20/10/17.
-//  Copyright © 2017 Ariel Ramírez. All rights reserved.
-//
 
-import UIKit
+import Foundation
 import UserNotifications
-import UserNotificationsUI
+import OneSignal
 
-class NotificationViewController: UIViewController, UNNotificationContentExtension {
-
-    @IBOutlet var label: UILabel?
+class NotificationService: UNNotificationServiceExtension {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any required interface initialization here.
+    var contentHandler: ((UNNotificationContent) -> Void)?
+    var receivedRequest: UNNotificationRequest!
+    var bestAttemptContent: UNMutableNotificationContent?
+    
+    override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
+        self.receivedRequest = request;
+        self.contentHandler = contentHandler
+        bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
+        
+        if let bestAttemptContent = bestAttemptContent {
+            OneSignal.didReceiveNotificationExtensionRequest(self.receivedRequest, with: self.bestAttemptContent)
+            contentHandler(bestAttemptContent)
+        }
     }
     
-    func didReceive(_ notification: UNNotification) {
-        self.label?.text = notification.request.content.body
+    override func serviceExtensionTimeWillExpire() {
+        // Called just before the extension will be terminated by the system.
+        // Use this as an opportunity to deliver your "best attempt" at modified content, otherwise the original push payload will be used.
+        if let contentHandler = contentHandler, let bestAttemptContent =  bestAttemptContent {
+            OneSignal.serviceExtensionTimeWillExpireRequest(self.receivedRequest, with: self.bestAttemptContent)
+            contentHandler(bestAttemptContent)
+        }
     }
-
+    
 }
