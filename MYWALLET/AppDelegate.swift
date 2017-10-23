@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //bundleID: armit-solutions.MYWALLET
         // Replace 'YOUR_APP_ID' with your OneSignal App ID.
         OneSignal.initWithLaunchOptions(launchOptions,
-                                        appId: "9be8b428-dfd8-4d76-a8f8-c04536afc8a2",
+                                        appId: "76c0663a-2c6b-4923-adfc-3fe02f283148",
                                         handleNotificationAction: nil,
                                         settings: onesignalInitSettings)
         

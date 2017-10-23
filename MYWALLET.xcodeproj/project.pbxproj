@@ -638,7 +638,7 @@
 				DEVELOPMENT_TEAM = FPCET9U9S6;
 				INFOPLIST_FILE = MyWalletNotifications/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "armit-solutions.MYWALLET.MyWalletNotifications";
+				PRODUCT_BUNDLE_IDENTIFIER = com.armit.MyWallet.Ar.MyWalletNotifications;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -655,7 +655,7 @@
 				DEVELOPMENT_TEAM = FPCET9U9S6;
 				INFOPLIST_FILE = MyWalletNotifications/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "armit-solutions.MYWALLET.MyWalletNotifications";
+				PRODUCT_BUNDLE_IDENTIFIER = com.armit.MyWallet.Ar.MyWalletNotifications;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -782,7 +782,7 @@
 				INFOPLIST_FILE = MYWALLET/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "armit-solutions.MYWALLET";
+				PRODUCT_BUNDLE_IDENTIFIER = com.armit.MyWallet.Ar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -801,7 +801,7 @@
 				INFOPLIST_FILE = MYWALLET/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "armit-solutions.MYWALLET";
+				PRODUCT_BUNDLE_IDENTIFIER = com.armit.MyWallet.Ar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
