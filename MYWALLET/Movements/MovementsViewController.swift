@@ -38,7 +38,6 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicatorView.startAnimating()
-        self.response!.printResponse()
         processMovements.callMovementsService(self.response!.tokenSeguridad) {
             results, resultsArray, error in
             if let error = error {
@@ -48,14 +47,12 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
                 //receivedResponseMovementsObject
                 self.responseMovements = results
                 self.labelSaldoServer.text = "$ \(results.saldo)"
-                debugPrint("SALDO: \(results.saldo)")
             }
             if let resultsArray = resultsArray {
                 //receivedMovementsArray
                 self.movements = resultsArray
                 self.movementsTableView.reloadData()
                 self.activityIndicatorView.stopAnimating()
-                debugPrint("Tarjeta: \(resultsArray[0].tarjeta)")
             }
         }
         // Do any additional setup after loading the view.
