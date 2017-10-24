@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MYWALLET/Autorize/AutorizeViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:MYWALLET.xcodeproj">
    </FileRef>
    <FileRef

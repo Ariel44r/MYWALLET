@@ -10,7 +10,15 @@ import UIKit
 import OneSignal
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, OSPermissionObserver, OSSubscriptionObserver {
+    func onOSPermissionChanged(_ stateChanges: OSPermissionStateChanges!) {
+        <#code#>
+    }
+    
+    func onOSSubscriptionChanged(_ stateChanges: OSSubscriptionStateChanges!) {
+        <#code#>
+    }
+    
 
     var window: UIWindow?
 
