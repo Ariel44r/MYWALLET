@@ -30,10 +30,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, OSPermissionObserver, OSS
         let notificationOpenedBlock: OSHandleNotificationActionBlock = { result in
             // This block gets called when the user reacts to a notification received
             let payload: OSNotificationPayload? = result?.notification.payload
-            
-            print("Message = \(payload!.body)")
-            print("badge number = \(String(describing: payload?.badge))")
-            print("notification sound = \(String(describing: payload?.sound))")
+            if let bodyNotification = payload!.body {
+                debugPrint("Body Notification: \(bodyNotification)")
+            }
+            if let badgeNotification = payload?.badge {
+                debugPrint("Badge Notification: \(badgeNotification)")
+            }
+            if let soundNotification = payload?.sound{
+                debugPrint("Sound Notification: \(soundNotification)")
+
+            }
             
             if let additionalData = result!.notification.payload!.additionalData {
                 print("additionalData = \(additionalData)")
