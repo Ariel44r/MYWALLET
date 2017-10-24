@@ -38,10 +38,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, OSPermissionObserver, OSS
             }
             if let soundNotification = payload?.sound{
                 debugPrint("Sound Notification: \(soundNotification)")
-
             }
             
-            if let additionalData = result!.notification.payload!.additionalData {
+            if let additionalDataDictionary = result!.notification.payload.additionalData as NSDictionary? {
+                debugPrint("ADITIONAL DATA AS NSDICTIONARY: \(additionalDataDictionary)")
+                if let data1 = additionalDataDictionary["tarjeta"] as? String {
+                    debugPrint("TARJETA: \(data1)")
+                }
+                if let data2 = additionalDataDictionary["monto"] as? String {
+                    debugPrint("MONTO: \(data2)")
+                }
+            }
+            
+            /*if let additionalData = result!.notification.payload!.additionalData {
                 print("additionalData = \(additionalData)")
                 
                 // DEEP LINK and open url in RedViewController
@@ -49,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, OSPermissionObserver, OSS
                 
                 //let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 
-                if let actionSelected = payload?.actionButtons {
+                /*if let actionSelected = payload?.actionButtons {
                     print("actionSelected = \(actionSelected)")
                 }
                 
@@ -64,20 +73,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, OSPermissionObserver, OSS
                     
                     print("actionID = \(actionID)")
                     
-                    if actionID == "id2" {
+                    if actionID == "ver_ID" {
                         print("do something when button 2 is pressed")
                         self.window?.rootViewController = instantiateRedViewController
                         self.window?.makeKeyAndVisible()
                         
                         
-                    } else if actionID == "id1" {
+                    } else if actionID == "ver_ID2" {
                         print("do something when button 1 is pressed")
                         self.window?.rootViewController = instantiatedGreenViewController
                         self.window?.makeKeyAndVisible()
                         
                     }
-                }
-            }
+                }*/
+            }*/
         }
         
         let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false, kOSSettingsKeyInAppLaunchURL: true, ]
@@ -121,6 +130,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, OSPermissionObserver, OSS
     
     // TODO: update docs to change method name
     // Add this new method
+    
+    func parseJSON(_ object: [String: String]) {
+        
+    }
+    
     func onOSSubscriptionChanged(_ stateChanges: OSSubscriptionStateChanges!) {
         if !stateChanges.from.subscribed && stateChanges.to.subscribed {
             print("Subscribed for OneSignal push notifications!")
