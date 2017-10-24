@@ -49,44 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, OSPermissionObserver, OSS
                     debugPrint("MONTO: \(data2)")
                 }
             }
-            
-            /*if let additionalData = result!.notification.payload!.additionalData {
-                print("additionalData = \(additionalData)")
-                
-                // DEEP LINK and open url in RedViewController
-                // Send notification with Additional Data > example key: "OpenURL" example value: "https://google.com"
-                
-                //let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                
-                /*if let actionSelected = payload?.actionButtons {
-                    print("actionSelected = \(actionSelected)")
-                }
-                
-                // DEEP LINK from action buttons
-                if let actionID = result?.action.actionID {
-                    
-                    // For presenting a ViewController from push notification action button
-                    let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let instantiateRedViewController : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "RedViewControllerID") as UIViewController
-                    let instantiatedGreenViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "GreenViewControllerID") as UIViewController
-                    self.window = UIWindow(frame: UIScreen.main.bounds)
-                    
-                    print("actionID = \(actionID)")
-                    
-                    if actionID == "ver_ID" {
-                        print("do something when button 2 is pressed")
-                        self.window?.rootViewController = instantiateRedViewController
-                        self.window?.makeKeyAndVisible()
-                        
-                        
-                    } else if actionID == "ver_ID2" {
-                        print("do something when button 1 is pressed")
-                        self.window?.rootViewController = instantiatedGreenViewController
-                        self.window?.makeKeyAndVisible()
-                        
-                    }
-                }*/
-            }*/
+
         }
         
         let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false, kOSSettingsKeyInAppLaunchURL: true, ]
@@ -116,23 +79,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, OSPermissionObserver, OSS
         }
         // prints out all properties
         print("PermissionStateChanges: \n\(stateChanges)")
-    }
-    
-    // Output:
-    /*
-     Thanks for accepting notifications!
-     PermissionStateChanges:
-     Optional(<OSSubscriptionStateChanges:
-     from: <OSPermissionState: hasPrompted: 0, status: NotDetermined>,
-     to:   <OSPermissionState: hasPrompted: 1, status: Authorized>
-     >
-     */
-    
-    // TODO: update docs to change method name
-    // Add this new method
-    
-    func parseJSON(_ object: [String: String]) {
-        
     }
     
     func onOSSubscriptionChanged(_ stateChanges: OSSubscriptionStateChanges!) {
