@@ -21,8 +21,7 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let dataPersistence = DataPersistence.checkIfUserIsLoged()
-        if dataPersistence.isLoged {
+        if DataPersistence.checkIfUserIsLoged().isLoged {
             buttonOutlet.setTitle("Tap for Movements", for: .normal)
         } else {
             buttonOutlet.setTitle("Login", for: .normal)
@@ -35,9 +34,8 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBAction func loginButton(_ sender: Any) {
-        let dataPersistence = DataPersistence.checkIfUserIsLoged()
-        if dataPersistence.isLoged == true {
-            self.response = dataPersistence.response
+        if DataPersistence.checkIfUserIsLoged().isLoged == true {
+            self.response = DataPersistence.checkIfUserIsLoged().response
             self.performSegue(withIdentifier: "movementsSegue", sender: nil)
         } else {
             headerLabel.text = "Login"
@@ -145,6 +143,10 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
             let movementsVC = segue.destination as! MovementsViewController
             movementsVC.response = self.response!
             movementsVC.delegate = self
+        }
+        if segue.identifier == "autorizeSegue" {
+            let autorizeVC = segue.destination as! AutorizeCViewController
+            autorizeVC.received = "hello to autorizeViewController"
         }
     }
     

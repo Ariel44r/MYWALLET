@@ -95,7 +95,7 @@
                         <outlet property="buttonOutlet" destination="YDX-vg-vSh" id="QWN-bU-6TX"/>
                         <outlet property="headerLabel" destination="bf0-su-4GA" id="Sb6-Qz-fIa"/>
                         <segue destination="TP9-tc-AMU" kind="modal" identifier="movementsSegue" modalTransitionStyle="flipHorizontal" id="gHu-F6-HDJ"/>
-                        <segue destination="tC7-yO-sth" kind="show" id="nTf-5E-hrl"/>
+                        <segue destination="tC7-yO-sth" kind="modal" identifier="autorizeSegue" modalTransitionStyle="coverVertical" id="cDK-3C-R1x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -317,10 +317,10 @@
             </objects>
             <point key="canvasLocation" x="1101.5999999999999" y="106.59670164917542"/>
         </scene>
-        <!--View Controller-->
+        <!--AutorizeC View Controller-->
         <scene sceneID="fWf-Lp-Wem">
             <objects>
-                <viewController id="tC7-yO-sth" customClass="ViewController" customModule="MYWALLET" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tC7-yO-sth" customClass="AutorizeCViewController" customModule="MYWALLET" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AUy-fy-WtC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -414,7 +414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4w8-Wp-2O5" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325.60000000000002" y="805.54722638680664"/>
+            <point key="canvasLocation" x="326" y="950"/>
         </scene>
     </scenes>
     <resources>
