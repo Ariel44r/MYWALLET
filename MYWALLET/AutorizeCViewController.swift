@@ -10,7 +10,7 @@ import UIKit
 
 class AutorizeCViewController: UIViewController {
 
-    var received: String?
+    var received: NSDictionary?
     
     
     override func viewDidLoad() {
@@ -18,7 +18,7 @@ class AutorizeCViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        if let received: String = received {
+        if let received: NSDictionary = received {
             debugPrint(received)
         }
     }

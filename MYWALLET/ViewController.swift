@@ -17,6 +17,7 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
     let messageButton1 = Constants.textAlertParam.MESSAGEBUTTON1
     var dataFromServer: NSDictionary = [:]
     var response: Response?
+    var toAutorizeVC: NSDictionary?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,10 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBAction func loginButton(_ sender: Any) {
+        //check if notification are received
+            //check if user is loged
+                //self.performSegue(withIdentifier: "autorizeSegue", sender: nil)
+                    //buttonOutlet.setTitle("Ver detalle de Compra", for: .normal)
         if DataPersistence.checkIfUserIsLoged().isLoged == true {
             self.response = DataPersistence.checkIfUserIsLoged().response
             self.performSegue(withIdentifier: "movementsSegue", sender: nil)
@@ -146,7 +151,7 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
         }
         if segue.identifier == "autorizeSegue" {
             let autorizeVC = segue.destination as! AutorizeCViewController
-            autorizeVC.received = "hello to autorizeViewController"
+            autorizeVC.received = toAutorizeVC!
         }
     }
     

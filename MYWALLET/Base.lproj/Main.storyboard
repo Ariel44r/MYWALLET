@@ -408,9 +408,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qnj-p1-XSa"/>
                     </view>
-                    <connections>
-                        <outlet property="headerLabel" destination="pto-Go-qPn" id="AmL-Xj-y1D"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4w8-Wp-2O5" sceneMemberID="firstResponder"/>
             </objects>
