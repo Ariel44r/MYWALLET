@@ -18,6 +18,8 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
     var dataFromServer: NSDictionary = [:]
     var response: Response?
     var toAutorizeVC: [String:Any]?
+    var loginAndAutorize: [String:Any]?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,7 +106,11 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
                             let codigoValidacion = Constants.ServerParameters.SMS["CodigoValidacion"]
                             if codigoValidacion == codigoValidacionInput {
                                 //callFunctionToDownloadMovements
-                                self.performSegue(withIdentifier: "movementsSegue", sender: nil)
+                                if let loginAndAutorize = self.loginAndAutorize {
+                                    self.performSegue(withIdentifier: "autorizeSegue", sender: nil)
+                                } else {
+                                    self.performSegue(withIdentifier: "movementsSegue", sender: nil)
+                                }
                             }
                             else {
                                 self.recallSMSValidation(phone)
@@ -148,6 +154,11 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
             let movementsVC = segue.destination as! MovementsViewController
             movementsVC.response = self.response!
             movementsVC.delegate = self
+        }
+        if segue.identifier == "autorizeSegue" {
+            let autorizeVC = segue.destination as! AutorizeCViewController
+            autorizeVC.received = self.loginAndAutorize!
+            self.loginAndAutorize = nil
         }
         /*if segue.identifier == "autorizeSegue" {
             let autorizeVC = segue.destination as! AutorizeCViewController

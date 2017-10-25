@@ -54,11 +54,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, OSPermissionObserver, OSS
                     dataDict["monto"] = data2
                     //dataDict.setValue(data2, forKey: "monto")
                 }
-                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let destinationViewController = storyboard.instantiateViewController(withIdentifier: "AutorizeCViewController") as! AutorizeCViewController
-                destinationViewController.received = dataDict
-                let root = self.window?.rootViewController as! UIViewController
-                root.present(destinationViewController, animated: true, completion: nil)
+                if DataPersistence.checkIfUserIsLoged().isLoged {
+                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let destinationViewController = storyboard.instantiateViewController(withIdentifier: "AutorizeCViewController") as! AutorizeCViewController
+                    destinationViewController.received = dataDict
+                    let root = self.window?.rootViewController as! UIViewController
+                    root.present(destinationViewController, animated: true, completion: nil)
+                } else {
+                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let destinationViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+                    destinationViewController.loginAndAutorize = dataDict
+                    let root = self.window?.rootViewController as! UIViewController
+                    root.present(destinationViewController, animated: true, completion: nil)
+                }
+                
             }
         }
         

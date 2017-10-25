@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MyWallet" id="BYZ-38-t0r" customClass="ViewController" customModule="MYWALLET" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="MYWALLET" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,6 +95,7 @@
                         <outlet property="buttonOutlet" destination="YDX-vg-vSh" id="QWN-bU-6TX"/>
                         <outlet property="headerLabel" destination="bf0-su-4GA" id="Sb6-Qz-fIa"/>
                         <segue destination="TP9-tc-AMU" kind="modal" identifier="movementsSegue" modalTransitionStyle="flipHorizontal" id="gHu-F6-HDJ"/>
+                        <segue destination="tC7-yO-sth" kind="show" identifier="autorizeSegue" id="3TG-WQ-R3F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
