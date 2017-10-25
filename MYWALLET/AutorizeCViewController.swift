@@ -45,7 +45,6 @@ class AutorizeCViewController: UIViewController {
             if let results = results {
                 self.dataFromServer = results as? [String: Any]
                 self.displaySimpleAlert(self.dataFromServer!["Descripcion"] as! String, "", "Ok")
-                debugPrint(results)
             }
         }
     }
