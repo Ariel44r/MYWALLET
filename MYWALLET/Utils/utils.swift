@@ -36,6 +36,10 @@ struct Constants {
         static var MOVEMENTS: [String: String] = [
             "TokenSeguridad":""
         ]
+        static var AUTORIZE: [String: Any] = [
+            "EsAutorizado":true,
+            "ID_Operacion":"123"
+        ]
         static let PARAMETERS: [String: [String: String]] = [
             "LOGIN": LOGIN,
             "SMS": SMS,

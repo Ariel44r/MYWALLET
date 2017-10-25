@@ -11,11 +11,16 @@ import UIKit
 class AutorizeCViewController: UIViewController {
 
     var received: [String:Any] = [String:Any]()
+    let serverManager = ServerManager()
+    var dataFromServer: NSDictionary = [:]
+    var response: Response?
     
     @IBOutlet weak var fieldText: UITextView!
     @IBAction func rechazarButton(_ sender: Any) {
+        displaySimpleAlert("La compra no fue autorizada", "", "Ok")
     }
     @IBAction func autorizarButton(_ sender: Any) {
+        callAutorizeService()
     }
     
     
@@ -25,17 +30,49 @@ class AutorizeCViewController: UIViewController {
         // Do any additional setup after loading the view.
         if let tarjeta = received["tarjeta"] {
             if let monto = received["monto"] {
-                fieldText.text = "Se intenta realizar una compra con tu tarjeta terminacion ************\(tarjeta) en Armit por un monto de $ \(monto) ¿Deseas autorizar la compra?"
+                fieldText.text = "Se intenta realizar una compra con tu tarjeta terminacion: ************\(tarjeta) en Armit por un monto de $ \(monto) ¿Deseas autorizar la compra?"
             }
         }
     }
 
+    func callAutorizeService() {
+        serverManager.postRequestAutorize() {
+            results, error in
+            if let error = error {
+                debugPrint("Error: \(error)")
+                return
+            }
+            if let results = results {
+                self.dataFromServer = results
+                debugPrint(results)
+            }
+        }
+    }
+    
+    //parseResponse
+    func parseResponse(_ results: NSDictionary) -> Response {
+        let codigoRespuesta: String = results["CodigoRespuesta"] as! String
+        let descripcion: String = results["Descripcion"] as! String
+        let ID_usuario: String = results["ID_Usuario"] as! String
+        let tokenSeguridad: String =  results["TokenSeguridad"] as! String
+        let response = Response(codigoRespuesta,descripcion,ID_usuario,tokenSeguridad)
+        return response
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    //displaySimpleAlert
+    func displaySimpleAlert(_ titleHeader: String, _ messageBody: String, _ messageButton: String) {
+        let myalert = UIAlertController(title: titleHeader, message: messageBody, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: messageButton, style: UIAlertActionStyle.default, handler:nil)
+        myalert.addAction(okAction)
+        self.present(myalert, animated:true, completion:nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
