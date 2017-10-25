@@ -8,12 +8,17 @@
 
 import UIKit
 
+protocol AutorizeViewControllerDelegate: class {
+    func userChoose()
+}
+
 class AutorizeCViewController: UIViewController {
 
     var received: [String:Any] = [String:Any]()
     let serverManager = ServerManager()
     var dataFromServer: [String: Any]?
     var response: Response?
+    var delegate: AutorizeViewControllerDelegate?
     
     @IBOutlet weak var fieldText: UITextView!
     @IBAction func rechazarButton(_ sender: Any) {
@@ -22,8 +27,7 @@ class AutorizeCViewController: UIViewController {
     @IBAction func autorizarButton(_ sender: Any) {
         callAutorizeService()
     }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,7 +38,7 @@ class AutorizeCViewController: UIViewController {
             }
         }
     }
-
+    
     func callAutorizeService() {
         serverManager.postRequestAutorize() {
             results, error in
@@ -67,7 +71,10 @@ class AutorizeCViewController: UIViewController {
     //displaySimpleAlert
     func displaySimpleAlert(_ titleHeader: String, _ messageBody: String, _ messageButton: String) {
         let myalert = UIAlertController(title: titleHeader, message: messageBody, preferredStyle: UIAlertControllerStyle.alert)
-        let okAction = UIAlertAction(title: messageButton, style: UIAlertActionStyle.default, handler:nil)
+        let okAction = UIAlertAction(title: messageButton, style: UIAlertActionStyle.default, handler:{ [weak myalert] (_) in
+            self.dismiss(animated: true, completion: nil)
+            self.delegate?.userChoose()
+        })
         myalert.addAction(okAction)
         self.present(myalert, animated:true, completion:nil)
     }

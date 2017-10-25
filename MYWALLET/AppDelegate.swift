@@ -65,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, OSPermissionObserver, OSS
                     let destinationViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
                     destinationViewController.loginAndAutorize = dataDict
                     let root = self.window?.rootViewController as! UIViewController
-                    root.present(destinationViewController, animated: true, completion: nil)
+                    root.present(destinationViewController, animated: false, completion: nil)
                 }
                 
             }

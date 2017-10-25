@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,  MovementsViewControllerDelegate {
+class ViewController: UIViewController,  MovementsViewControllerDelegate, AutorizeViewControllerDelegate {
 
     //MARK: variablesAndInstances
     let serverManager = ServerManager()
@@ -160,6 +160,7 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
             let autorizeVC = segue.destination as! AutorizeCViewController
             autorizeVC.received = self.loginAndAutorize!
             self.loginAndAutorize = nil
+            autorizeVC.delegate = self
         }
         /*if segue.identifier == "autorizeSegue" {
             let autorizeVC = segue.destination as! AutorizeCViewController
@@ -170,6 +171,10 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
     //MARK: Delegate
     func logOut() {
         buttonOutlet.setTitle("Login", for: .normal)
+    }
+    
+    func userChoose() {
+        buttonOutlet.setTitle("Tap for Movements", for: .normal)
     }
     
     
