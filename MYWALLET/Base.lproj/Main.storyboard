@@ -65,18 +65,28 @@
                                         <rect key="frame" x="169" y="315" width="37" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </activityIndicatorView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3hQ-N2-Ee8">
+                                        <rect key="frame" x="8" y="165" width="359" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.50342465753424659" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3hQ-N2-Ee8" secondAttribute="trailing" constant="8" id="07u-GA-6rh"/>
                                     <constraint firstAttribute="bottom" secondItem="YDX-vg-vSh" secondAttribute="bottom" constant="174" id="5Dm-kX-Pab"/>
                                     <constraint firstItem="PSo-Wi-ZE0" firstAttribute="top" secondItem="1vc-Le-bVe" secondAttribute="bottom" id="6Uy-9e-lk4"/>
                                     <constraint firstItem="1vc-Le-bVe" firstAttribute="leading" secondItem="p4T-Er-X6S" secondAttribute="leading" id="6fv-Kl-LAY"/>
                                     <constraint firstItem="1vc-Le-bVe" firstAttribute="top" secondItem="p4T-Er-X6S" secondAttribute="top" id="ERu-HA-Jpm"/>
                                     <constraint firstAttribute="trailing" secondItem="YDX-vg-vSh" secondAttribute="trailing" constant="8" id="JRz-h4-OBI"/>
                                     <constraint firstAttribute="trailing" secondItem="PSo-Wi-ZE0" secondAttribute="trailing" id="NWZ-Ut-vdM"/>
+                                    <constraint firstItem="3hQ-N2-Ee8" firstAttribute="leading" secondItem="p4T-Er-X6S" secondAttribute="leading" constant="8" id="STK-nO-ahk"/>
                                     <constraint firstItem="YDX-vg-vSh" firstAttribute="leading" secondItem="p4T-Er-X6S" secondAttribute="leading" constant="8" id="hsV-ui-EHd"/>
                                     <constraint firstItem="YDX-vg-vSh" firstAttribute="leading" secondItem="p4T-Er-X6S" secondAttribute="leadingMargin" id="kZ4-Yf-5oE"/>
                                     <constraint firstItem="1vc-Le-bVe" firstAttribute="width" secondItem="p4T-Er-X6S" secondAttribute="width" id="o6G-Ac-8Sv"/>
+                                    <constraint firstItem="3hQ-N2-Ee8" firstAttribute="top" secondItem="PSo-Wi-ZE0" secondAttribute="bottom" constant="101" id="sdm-oc-foK"/>
                                     <constraint firstItem="PSo-Wi-ZE0" firstAttribute="leading" secondItem="p4T-Er-X6S" secondAttribute="leading" id="wQ5-f1-bpD"/>
                                 </constraints>
                             </view>
@@ -94,6 +104,7 @@
                         <outlet property="activityIndicator" destination="bwU-ac-spb" id="gxf-dR-U8M"/>
                         <outlet property="buttonOutlet" destination="YDX-vg-vSh" id="QWN-bU-6TX"/>
                         <outlet property="headerLabel" destination="bf0-su-4GA" id="Sb6-Qz-fIa"/>
+                        <outlet property="labelIfLogged" destination="3hQ-N2-Ee8" id="U5T-7b-4bi"/>
                         <segue destination="TP9-tc-AMU" kind="modal" identifier="movementsSegue" modalTransitionStyle="flipHorizontal" id="gHu-F6-HDJ"/>
                         <segue destination="tC7-yO-sth" kind="show" identifier="autorizeSegue" id="3TG-WQ-R3F"/>
                     </connections>
@@ -401,6 +412,7 @@
                                     <constraint firstItem="dhM-uJ-6dM" firstAttribute="leading" secondItem="SIc-BZ-JP3" secondAttribute="leading" id="dhe-lS-aun"/>
                                     <constraint firstItem="iNc-na-8sf" firstAttribute="leading" secondItem="94o-Rp-ISB" secondAttribute="leading" id="l47-dV-zqZ"/>
                                     <constraint firstAttribute="trailing" secondItem="fgp-tg-Ooj" secondAttribute="trailing" id="lp1-nc-COw"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Xc-J1-YJq" secondAttribute="bottom" constant="224" id="rkB-s9-dSu"/>
                                     <constraint firstItem="fgp-tg-Ooj" firstAttribute="leading" secondItem="SIc-BZ-JP3" secondAttribute="leading" id="v7i-Mw-glB"/>
                                 </constraints>
                             </view>

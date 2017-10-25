@@ -24,6 +24,9 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if loginAndAutorize != nil {
+            labelIfLogged.text = "Please log in to see detail"
+        }
         if DataPersistence.checkIfUserIsLoged().isLoged {
             buttonOutlet.setTitle("Tap for Movements", for: .normal)
         } else {
@@ -32,6 +35,8 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
     }
     
     //mark: outletsAndActions
+    
+    @IBOutlet weak var labelIfLogged: UITextField!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var buttonOutlet: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -174,6 +179,7 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
     }
     
     func userChoose() {
+        labelIfLogged.text = ""
         buttonOutlet.setTitle("Tap for Movements", for: .normal)
     }
     
