@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, OSPermissionObserver, OSS
                     let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let destinationViewController = storyboard.instantiateViewController(withIdentifier: "AutorizeCViewController") as! AutorizeCViewController
                     destinationViewController.received = dataDict
-                    let root = self.window?.rootViewController as! UIViewController
+                    let root = getTopViewController()
                     root.present(destinationViewController, animated: true, completion: nil)
                 } else {
                     let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -69,6 +69,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, OSPermissionObserver, OSS
                 }
                 
             }
+        }
+        
+        func getTopViewController() -> UIViewController
+        {
+            var topViewController = UIApplication.shared.delegate!.window!!.rootViewController!
+            while (topViewController.presentedViewController != nil) {
+                topViewController = topViewController.presentedViewController!
+            }
+            return topViewController
         }
         
         let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false, kOSSettingsKeyInAppLaunchURL: true, ]
