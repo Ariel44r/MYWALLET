@@ -40,16 +40,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, OSPermissionObserver, OSS
                 debugPrint("Sound Notification: \(soundNotification)")
             }
             
+            var dataDict: [String:Any] = [String:Any]()
+            
             if let additionalDataDictionary = result!.notification.payload.additionalData as NSDictionary? {
                 debugPrint("ADITIONAL DATA AS NSDICTIONARY: \(additionalDataDictionary)")
                 if let data1 = additionalDataDictionary["tarjeta"] as? String {
                     debugPrint("TARJETA: \(data1)")
+                    dataDict["tarjeta"] = data1
+                    //dataDict.setValue(data1, forKey: "tarjeta")
                 }
                 if let data2 = additionalDataDictionary["monto"] as? String {
                     debugPrint("MONTO: \(data2)")
+                    dataDict["monto"] = data2
+                    //dataDict.setValue(data2, forKey: "monto")
                 }
+                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let destinationViewController = storyboard.instantiateViewController(withIdentifier: "AutorizeCViewController") as! AutorizeCViewController
+                destinationViewController.received = dataDict
+                let root = self.window?.rootViewController as! UIViewController
+                root.present(destinationViewController, animated: true, completion: nil)
             }
-
         }
         
         let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false, kOSSettingsKeyInAppLaunchURL: true, ]

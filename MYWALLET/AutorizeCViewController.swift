@@ -10,16 +10,23 @@ import UIKit
 
 class AutorizeCViewController: UIViewController {
 
-    var received: NSDictionary?
+    var received: [String:Any] = [String:Any]()
+    
+    @IBOutlet weak var fieldText: UITextView!
+    @IBAction func rechazarButton(_ sender: Any) {
+    }
+    @IBAction func autorizarButton(_ sender: Any) {
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        if let received: NSDictionary = received {
-            debugPrint(received)
+        if let tarjeta = received["tarjeta"] {
+            if let monto = received["monto"] {
+                fieldText.text = "Se intenta realizar una compra con tu tarjeta terminacion ************\(tarjeta) en Armit por un monto de $ \(monto) ¿Deseas autorizar la compra?"
+            }
         }
     }
 

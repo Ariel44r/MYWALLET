@@ -17,7 +17,7 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
     let messageButton1 = Constants.textAlertParam.MESSAGEBUTTON1
     var dataFromServer: NSDictionary = [:]
     var response: Response?
-    var toAutorizeVC: NSDictionary?
+    var toAutorizeVC: [String:Any]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -149,10 +149,10 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
             movementsVC.response = self.response!
             movementsVC.delegate = self
         }
-        if segue.identifier == "autorizeSegue" {
+        /*if segue.identifier == "autorizeSegue" {
             let autorizeVC = segue.destination as! AutorizeCViewController
             autorizeVC.received = toAutorizeVC!
-        }
+        }*/
     }
     
     //MARK: Delegate

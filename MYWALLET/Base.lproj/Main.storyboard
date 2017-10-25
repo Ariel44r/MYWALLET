@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MYWALLET" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyWallet" id="BYZ-38-t0r" customClass="ViewController" customModule="MYWALLET" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,6 @@
                         <outlet property="buttonOutlet" destination="YDX-vg-vSh" id="QWN-bU-6TX"/>
                         <outlet property="headerLabel" destination="bf0-su-4GA" id="Sb6-Qz-fIa"/>
                         <segue destination="TP9-tc-AMU" kind="modal" identifier="movementsSegue" modalTransitionStyle="flipHorizontal" id="gHu-F6-HDJ"/>
-                        <segue destination="tC7-yO-sth" kind="modal" identifier="autorizeSegue" modalTransitionStyle="coverVertical" id="cDK-3C-R1x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -320,7 +319,7 @@
         <!--AutorizeC View Controller-->
         <scene sceneID="fWf-Lp-Wem">
             <objects>
-                <viewController id="tC7-yO-sth" customClass="AutorizeCViewController" customModule="MYWALLET" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AutorizeCViewController" id="tC7-yO-sth" customClass="AutorizeCViewController" customModule="MYWALLET" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AUy-fy-WtC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -354,12 +353,12 @@
                                         </constraints>
                                     </view>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Se intenta realizar una compra con tu tarjeta" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="94o-Rp-ISB">
-                                        <rect key="frame" x="67" y="116" width="240" height="85"/>
+                                        <rect key="frame" x="67" y="116" width="240" height="182"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="85" id="pkM-05-sWd"/>
+                                            <constraint firstAttribute="height" constant="182" id="pkM-05-sWd"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNc-na-8sf">
@@ -371,6 +370,9 @@
                                         <state key="normal" title="Rechazar">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="rechazarButton:" destination="tC7-yO-sth" eventType="touchUpInside" id="Vev-Uw-WAt"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xc-J1-YJq">
                                         <rect key="frame" x="207" y="413" width="100" height="30"/>
@@ -378,6 +380,9 @@
                                         <state key="normal" title="Autorizar">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="autorizarButton:" destination="tC7-yO-sth" eventType="touchUpInside" id="6Qn-fj-Nso"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -408,10 +413,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qnj-p1-XSa"/>
                     </view>
+                    <connections>
+                        <outlet property="fieldText" destination="94o-Rp-ISB" id="axY-ct-c3w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4w8-Wp-2O5" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="326" y="950"/>
+            <point key="canvasLocation" x="325.60000000000002" y="949.47526236881572"/>
         </scene>
     </scenes>
     <resources>
