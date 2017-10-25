@@ -12,7 +12,7 @@ class AutorizeCViewController: UIViewController {
 
     var received: [String:Any] = [String:Any]()
     let serverManager = ServerManager()
-    var dataFromServer: NSDictionary = [:]
+    var dataFromServer: [String: Any]?
     var response: Response?
     
     @IBOutlet weak var fieldText: UITextView!
@@ -43,7 +43,8 @@ class AutorizeCViewController: UIViewController {
                 return
             }
             if let results = results {
-                self.dataFromServer = results
+                self.dataFromServer = results as? [String: Any]
+                self.displaySimpleAlert(self.dataFromServer!["Descripcion"] as! String, "", "Ok")
                 debugPrint(results)
             }
         }
