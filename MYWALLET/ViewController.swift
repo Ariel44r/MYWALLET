@@ -105,10 +105,11 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate {
                             DataPersistence.saveUserPreferences(response)
                             let codigoValidacion = Constants.ServerParameters.SMS["CodigoValidacion"]
                             if codigoValidacion == codigoValidacionInput {
-                                //callFunctionToDownloadMovements
-                                if let loginAndAutorize = self.loginAndAutorize {
+                                //checkIfPushNotificationAreAvailable
+                                if self.loginAndAutorize != nil {
                                     self.performSegue(withIdentifier: "autorizeSegue", sender: nil)
                                 } else {
+                                    //callFunctionToDownloadMovements
                                     self.performSegue(withIdentifier: "movementsSegue", sender: nil)
                                 }
                             }
