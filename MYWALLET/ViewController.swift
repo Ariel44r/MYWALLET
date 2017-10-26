@@ -179,8 +179,8 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
     }
     
     func userChoose() {
-        self.performSegue(withIdentifier: "movementsSegue", sender: nil)
         labelIfLogged.text = ""
+        self.performSegue(withIdentifier: "movementsSegue", sender: nil)
     }
     
 }

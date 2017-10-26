@@ -147,6 +147,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F1324931FA163E600F98376 /* AutorizeMovement */ = {
+			isa = PBXGroup;
+			children = (
+				4F0E6B791FA007B300BF953D /* AutorizeCViewController.swift */,
+			);
+			path = AutorizeMovement;
+			sourceTree = "<group>";
+		};
 		4F265F861F9E99FB00B72763 /* MyWalletNotifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,7 +218,7 @@
 				4F844D991F93F2EF005C8662 /* AppDelegate.swift */,
 				4F844D9B1F93F2EF005C8662 /* ViewController.swift */,
 				4F844D9D1F93F2EF005C8662 /* Main.storyboard */,
-				4F0E6B791FA007B300BF953D /* AutorizeCViewController.swift */,
+				4F1324931FA163E600F98376 /* AutorizeMovement */,
 				4F4952031F98111C007EFFBB /* Movements */,
 				4F844DA01F93F2EF005C8662 /* Assets.xcassets */,
 				4F844DA21F93F2EF005C8662 /* LaunchScreen.storyboard */,
