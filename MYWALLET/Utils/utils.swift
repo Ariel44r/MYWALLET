@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PKHUD
 
 struct Constants {
     struct Servers {
@@ -69,5 +70,13 @@ struct Constants {
             "messageBody":"Código de validación",
             "messageButton":"VALIDAR",
             ]
+    }
+    struct progressIndicator {
+        static func viewProgress() {
+            HUD.show(.progress)
+        }
+        static func dismissProgress() {
+            HUD.hide()
+        }
     }
 }

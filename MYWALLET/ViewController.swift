@@ -64,7 +64,8 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
     }
     
     func callLoginService(_ phone: String) {
-        activityIndicator.startAnimating()
+        Constants.progressIndicator.viewProgress()
+        //activityIndicator.startAnimating()
         serverManager.postRequest("LOGIN","Telefono",phone) {
             results, error in
             if let error = error {
@@ -72,7 +73,8 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
                 return
             }
             if let results = results {
-                self.activityIndicator.stopAnimating()
+                Constants.progressIndicator.dismissProgress()
+                //self.activityIndicator.stopAnimating()
                 self.dataFromServer = results
                 if self.validateResponseCode(self.dataFromServer) {
                     self.callSMSValidationService(phone, Constants.textAlertParam.TEXTALERTPARAM2)
@@ -92,7 +94,8 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
             if let results = results {
                 debugPrint(results)
                 codigoValidacionInput = results
-                self.activityIndicator.startAnimating()
+                Constants.progressIndicator.viewProgress()
+                //self.activityIndicator.startAnimating()
                 self.serverManager.postRequest("SMS","Telefono",phone) {
                     results, error in
                     if let error = error {
@@ -100,7 +103,8 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
                         return
                     }
                     if let results = results {
-                        self.activityIndicator.stopAnimating()
+                        Constants.progressIndicator.dismissProgress()
+                        //self.activityIndicator.stopAnimating()
                         //after receive data from server
                         if self.validateResponseCode(results) {
                             let response = self.parseResponse(results)
