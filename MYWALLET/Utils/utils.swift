@@ -22,6 +22,7 @@ struct Constants {
             "MOVEMENTS": endMovements,
             "AUTORIZADOR": endAutorizacion
         ]
+        static let timeOut = 30.0
     }
     
     struct ServerParameters {
@@ -70,6 +71,11 @@ struct Constants {
             "messageBody":"Código de validación",
             "messageButton":"VALIDAR",
             ]
+        static let TEXTALERTPARAMETERSINCORRECTLOGIN = [
+            "titleHeader":"El número que ingreso contiene menos de 10 digitos, por favor intente de nuevo",
+            "messageBody":"Número",
+            "messageButton":"INGRESAR",
+            ]
     }
     struct progressIndicator {
         static func viewProgress() {
@@ -80,6 +86,22 @@ struct Constants {
         }
         static func progressText(_ title: String, _ subtitle: String) {
             HUD.show(.labeledProgress(title: title, subtitle: subtitle))
+            if HUD.isVisible {
+                HUD.hide(afterDelay: Servers.timeOut, completion: {
+                    error in
+                    HUD.show(.label("Internet connection is failed, please check the connection and try again"))
+                    HUD.hide(afterDelay: 6.0)
+                })
+            }
+        }
+        static func errorProgress(_ title: String, _ subtitle: String) {
+            while true {
+                if !HUD.isVisible {
+                    debugPrint("is not visible now")
+                    //HUD.show(.labeledError(title: title, subtitle: subtitle))
+                    break
+                }
+            }
         }
     }
 }

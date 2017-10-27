@@ -17,7 +17,7 @@ class ServerManager {
             "Content-Type": "application/json"
         ]
         let parametersAndURL = getParametersAndURL(service, varToUpdate, valToUpdate)
-        let request = NSMutableURLRequest(url: NSURL(string: parametersAndURL.URL)! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 30.0)
+        let request = NSMutableURLRequest(url: NSURL(string: parametersAndURL.URL)! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: Constants.Servers.timeOut)
         request.httpMethod = "POST"
         request.allHTTPHeaderFields = headers
         request.httpBody = dataWithJSONObject(parametersAndURL.parameters)

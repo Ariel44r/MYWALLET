@@ -49,14 +49,22 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
             self.response = DataPersistence.checkIfUserIsLoged().response
             self.performSegue(withIdentifier: "movementsSegue", sender: nil)
         } else {
-            headerLabel.text = "Login"
-            displayFieldTextAlert(titleHeader1, messageBody1, messageButton1) {
-                results, error in
-                if let error = error {
-                    debugPrint("Error: \(error)")
-                }
-                if let results = results {
-                    self.callLoginService(results)
+            self.loginValidation(titleHeader1, messageBody1, messageButton1)
+        }
+    }
+    
+    func loginValidation(_ titleH: String, _ messageB: String, _ messageBu: String) {
+        headerLabel.text = "Login"
+        displayFieldTextAlert(titleH,messageB,messageBu) {
+            results, error in
+            if let error = error {
+                debugPrint("Error: \(error)")
+            }
+            if let results = results {
+                if results.count == 10 {
+                   self.callLoginService(results)
+                } else {
+                    self.recallLoginValidation()
                 }
             }
         }
@@ -128,6 +136,10 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
                 }
             }
         }
+    }
+    
+    func recallLoginValidation() {
+        self.loginValidation(Constants.textAlertParam.TEXTALERTPARAMETERSINCORRECTLOGIN["titleHeader"]!, Constants.textAlertParam.TEXTALERTPARAMETERSINCORRECTLOGIN["messageBody"]!, Constants.textAlertParam.TEXTALERTPARAMETERSINCORRECTLOGIN["messageButton"]!)
     }
     
     func recallSMSValidation(_ telefono: String) {

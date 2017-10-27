@@ -36,7 +36,12 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Constants.progressIndicator.progressText("Downloading movements", "Please hold on")
+        self.getMovements()
+        // Do any additional setup after loading the view.
+    }
+
+    func getMovements() {
+        Constants.progressIndicator.progressText("Getting movements", "Please hold on")
         processMovements.callMovementsService(self.response!.tokenSeguridad) {
             results, resultsArray, error in
             if let error = error {
@@ -54,9 +59,8 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
                 Constants.progressIndicator.dismissProgress()
             }
         }
-        // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
