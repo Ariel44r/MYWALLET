@@ -39,7 +39,6 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
     @IBOutlet weak var labelIfLogged: UITextField!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var buttonOutlet: UIButton!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBAction func loginButton(_ sender: Any) {
         //check if notification are received
@@ -65,7 +64,6 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
     
     func callLoginService(_ phone: String) {
         Constants.progressIndicator.viewProgress()
-        //activityIndicator.startAnimating()
         serverManager.postRequest("LOGIN","Telefono",phone) {
             results, error in
             if let error = error {
@@ -95,7 +93,6 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
                 debugPrint(results)
                 codigoValidacionInput = results
                 Constants.progressIndicator.viewProgress()
-                //self.activityIndicator.startAnimating()
                 self.serverManager.postRequest("SMS","Telefono",phone) {
                     results, error in
                     if let error = error {
@@ -104,7 +101,6 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
                     }
                     if let results = results {
                         Constants.progressIndicator.dismissProgress()
-                        //self.activityIndicator.stopAnimating()
                         //after receive data from server
                         if self.validateResponseCode(results) {
                             let response = self.parseResponse(results)

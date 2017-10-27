@@ -27,7 +27,6 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var labelMyWallet: UILabel!
     @IBOutlet weak var labelSaldoServer: UILabel!
     @IBOutlet weak var labelSaldo: UILabel!
-    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     @IBAction func logOutButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -37,7 +36,7 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        activityIndicatorView.startAnimating()
+        Constants.progressIndicator.viewProgress()
         processMovements.callMovementsService(self.response!.tokenSeguridad) {
             results, resultsArray, error in
             if let error = error {
@@ -52,7 +51,7 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
                 //receivedMovementsArray
                 self.movements = resultsArray
                 self.movementsTableView.reloadData()
-                self.activityIndicatorView.stopAnimating()
+                Constants.progressIndicator.dismissProgress()
             }
         }
         // Do any additional setup after loading the view.
@@ -62,17 +61,6 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
