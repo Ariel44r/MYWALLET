@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3783A754B40623E81F930A6E /* libPods-MYWALLET.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C148349DE49DF8C6AE425A6A /* libPods-MYWALLET.a */; };
 		4F09BC4B1F98570900701C53 /* ResponseMovements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F09BC4A1F98570900701C53 /* ResponseMovements.swift */; };
 		4F0E6B7A1FA007B300BF953D /* AutorizeCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0E6B791FA007B300BF953D /* AutorizeCViewController.swift */; };
 		4F265F831F9E99FB00B72763 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F265F821F9E99FB00B72763 /* UserNotifications.framework */; };
@@ -30,7 +29,8 @@
 		4F844DC81F93F321005C8662 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F844DC71F93F321005C8662 /* ServerManager.swift */; };
 		4FCBBDEB1F96C36700B8475C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCBBDEA1F96C36700B8475C /* Response.swift */; };
 		4FE3CB101F9B79A700C12839 /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE3CB0F1F9B79A700C12839 /* DataPersistence.swift */; };
-		DBA66DB7DEFD9470ACF717BC /* libPods-MyWalletNotifications.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA7B4C9592BE77AC6B76DD3 /* libPods-MyWalletNotifications.a */; };
+		A3DDDBDB9943C1A8C3E42AAC /* Pods_MYWALLET.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0DBE4A7F8D85FF27E560D3B /* Pods_MYWALLET.framework */; };
+		D34F9A3C12E616E084FD28E0 /* Pods_MyWalletNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A5CAA9D517BBDF2343B354 /* Pods_MyWalletNotifications.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +72,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01A5CAA9D517BBDF2343B354 /* Pods_MyWalletNotifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyWalletNotifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EDF9FEACF2EF54CEE2D7F56 /* Pods-MYWALLET.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYWALLET.release.xcconfig"; path = "Pods/Target Support Files/Pods-MYWALLET/Pods-MYWALLET.release.xcconfig"; sourceTree = "<group>"; };
 		43AAC2839D3CA9A8B2331307 /* Pods-MYWALLET.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYWALLET.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MYWALLET/Pods-MYWALLET.debug.xcconfig"; sourceTree = "<group>"; };
 		4F09BC4A1F98570900701C53 /* ResponseMovements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseMovements.swift; sourceTree = "<group>"; };
@@ -106,9 +107,8 @@
 		4FCBBDEA1F96C36700B8475C /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		4FE3CB0F1F9B79A700C12839 /* DataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistence.swift; sourceTree = "<group>"; };
 		9CF5447B782BAFEFC0FE6873 /* Pods-MyWalletNotifications.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWalletNotifications.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWalletNotifications/Pods-MyWalletNotifications.debug.xcconfig"; sourceTree = "<group>"; };
-		AAA7B4C9592BE77AC6B76DD3 /* libPods-MyWalletNotifications.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyWalletNotifications.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C148349DE49DF8C6AE425A6A /* libPods-MYWALLET.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MYWALLET.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12EF14F3181A892D590D62E /* Pods-MyWalletNotifications.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWalletNotifications.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWalletNotifications/Pods-MyWalletNotifications.release.xcconfig"; sourceTree = "<group>"; };
+		F0DBE4A7F8D85FF27E560D3B /* Pods_MYWALLET.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MYWALLET.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,7 @@
 			files = (
 				4F265F851F9E99FB00B72763 /* UserNotificationsUI.framework in Frameworks */,
 				4F265F831F9E99FB00B72763 /* UserNotifications.framework in Frameworks */,
-				DBA66DB7DEFD9470ACF717BC /* libPods-MyWalletNotifications.a in Frameworks */,
+				D34F9A3C12E616E084FD28E0 /* Pods_MyWalletNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3783A754B40623E81F930A6E /* libPods-MYWALLET.a in Frameworks */,
+				A3DDDBDB9943C1A8C3E42AAC /* Pods_MYWALLET.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,10 +267,10 @@
 		60F3384FE4F670D87DB795A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C148349DE49DF8C6AE425A6A /* libPods-MYWALLET.a */,
 				4F265F821F9E99FB00B72763 /* UserNotifications.framework */,
 				4F265F841F9E99FB00B72763 /* UserNotificationsUI.framework */,
-				AAA7B4C9592BE77AC6B76DD3 /* libPods-MyWalletNotifications.a */,
+				F0DBE4A7F8D85FF27E560D3B /* Pods_MYWALLET.framework */,
+				01A5CAA9D517BBDF2343B354 /* Pods_MyWalletNotifications.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -538,9 +538,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MYWALLET/Pods-MYWALLET-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

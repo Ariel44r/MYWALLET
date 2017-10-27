@@ -7,91 +7,199 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03CC28F48D44B86314951CFE4C86A922 /* Pods-MYWALLET-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D27213489D6FADEA38DE5B1B62D05E98 /* Pods-MYWALLET-dummy.m */; };
-		27BD9C255FF509964DADFFDDD00C988E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		3465722842DF0131536DA3332F2B0300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		943EA827322D46CD43D2F664B4CEA0F5 /* Pods-MyWalletNotifications-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B260B578E9F32CAA58D5C987AFF5B9F5 /* Pods-MyWalletNotifications-dummy.m */; };
+		17E7E62102D200AFE11B049F570C9397 /* PKHUDErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B430AF207499E704471CF572D67AD /* PKHUDErrorView.swift */; };
+		1823F57D1F20FCE55466E033892724A3 /* Pods-MyWalletNotifications-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 917A386FED0829D070A984995BBDFA8A /* Pods-MyWalletNotifications-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1929F91EB38B923FBFA0B2F53C0C4877 /* PKHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D8A055A8E422C3D8DF4322E64ECBDD6F /* PKHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D074B9127FA5FC2639ADEABB5B3D2A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		1F34910B27A3B86966E07898A2B70AE6 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E69A7408CB21620E2A17E340F6FFD86 /* FrameView.swift */; };
+		2DCA4225866D2445C444325589BD9744 /* PKHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 532640575B4A07EFCB56AFE8281F836D /* PKHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3470186F176465D3CA04711D0D82DF38 /* PKHUDAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074F3BD57C4869ADA5CCA0DEC620DE15 /* PKHUDAnimation.swift */; };
+		34D8AB5C8FA400C58D7CA084633DF744 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25ED514471A6B2875153AB41C9741750 /* Images.xcassets */; };
+		766750E7B98FF8495403D0C7B5064D6C /* PKHUDProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7379262B8966E8B33ECD17583A001B48 /* PKHUDProgressView.swift */; };
+		7AAAEE794B80FCD4F1CCEC6A650A655D /* Pods-MyWalletNotifications-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F971FBF5E8C55D9F984278AE71956D /* Pods-MyWalletNotifications-dummy.m */; };
+		7F09171ED8899C35E45511452323B3DF /* PKHUDSquareBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEFED1F4CD543745FF9584E206EE95F /* PKHUDSquareBaseView.swift */; };
+		869B25CDDA4D1BDA81A495A23D43E108 /* PKHUDAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1DFC54FE04845C33B863536CE49ED3 /* PKHUDAssets.swift */; };
+		89C4ADD534D41DF5442F67D799B8E12B /* PKHUDSystemActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76A22FD472028CC296AA2BC956A3E9 /* PKHUDSystemActivityIndicatorView.swift */; };
+		A5A9F17A94A6CC0F7D4E9DE0FCAFE5AB /* PKHUDSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD6A16564CE76DE950DBB455937B4DB /* PKHUDSuccessView.swift */; };
+		A7BA7C4E4C047A5698A68CA76A453605 /* PKHUDTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239EA07587FBD400C327E364579681DA /* PKHUDTextView.swift */; };
+		AEA27A6C1523E5B1A1B3B74CA02FB67D /* PKHUDRotatingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B5D36BAA8A2577F1D1451833E5EB92 /* PKHUDRotatingImageView.swift */; };
+		B1DC643D39F725A5C89C8195B5C10A09 /* PKHUDAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC32EA7AC3CBD21B6C75D5BE7F3B53C /* PKHUDAnimating.swift */; };
+		BA1B53BE85DE9BD789FE1C32FBA8C752 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C605392B897E07E362774B8731AF78 /* HUD.swift */; };
+		BB2E58C66F679FAEC01499BDDECE2242 /* Pods-MYWALLET-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1642A893BE09745E2E480F39EA3328BA /* Pods-MYWALLET-dummy.m */; };
+		BF541FB658B81D55E6A960701BF0619E /* PKHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8461E19AFCCB4A3162C700E88FE6C5A /* PKHUD.swift */; };
+		CADB77A11AEC922E05EBA0F87539C719 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		D0F542D62E2AA523E0A3D28DC85D2012 /* PKHUDWideBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0F775482E4A6226F23AB6049EFFB /* PKHUDWideBaseView.swift */; };
+		E07D61E16D503C995465B1FB15A7E917 /* Pods-MYWALLET-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0B34A77D3A515A85A7B706547BDB3F7 /* Pods-MYWALLET-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E57944FDD00D7F5F2674D4D52E0F52BA /* PKHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7662E5A54CA8D414C82FCD863F0B7E56 /* PKHUD-dummy.m */; };
+		F4C22A07683E879CB3ECF7D6A73F667E /* WindowRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA8A63CD774772EF30B096D9430F97 /* WindowRootViewController.swift */; };
+		F5F57EB54A811F73C41F1537030F41EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		F61C2235825FE532417891978344385E /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A808445E56D03495DA9156D07A7E80 /* Window.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0BD159BF44629C07F0A4864C8F18BFFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7A75F149082140741FC1E0B5B2863C8;
+			remoteInfo = PKHUD;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		0107E81959F737611A31E5671A94C47B /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = iOS_SDK/OneSignalSDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
-		2CB86FBD7F910DC43C1D964FB2D42959 /* libPods-MYWALLET.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MYWALLET.a"; path = "libPods-MYWALLET.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		41F99FE285E667902EE80AA0838D5FE1 /* Pods-MyWalletNotifications-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MyWalletNotifications-acknowledgements.markdown"; sourceTree = "<group>"; };
-		469B08D7845457CBD2C1550FA0969718 /* Pods-MyWalletNotifications.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyWalletNotifications.release.xcconfig"; sourceTree = "<group>"; };
-		487D7A2189FB1DF8FE35B5F3B6227C53 /* Pods-MyWalletNotifications-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyWalletNotifications-resources.sh"; sourceTree = "<group>"; };
-		58BD080D2618FC29145DA89A9BF663B7 /* Pods-MYWALLET-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MYWALLET-acknowledgements.markdown"; sourceTree = "<group>"; };
+		00B8DD189A9EA9AFA4A898E5700D6E34 /* PKHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PKHUD.framework; path = PKHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		074F3BD57C4869ADA5CCA0DEC620DE15 /* PKHUDAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDAnimation.swift; path = PKHUD/PKHUDAnimation.swift; sourceTree = "<group>"; };
+		1642A893BE09745E2E480F39EA3328BA /* Pods-MYWALLET-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MYWALLET-dummy.m"; sourceTree = "<group>"; };
+		1D402D51E685A39EC5509FBE2071A878 /* Pods-MYWALLET-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MYWALLET-resources.sh"; sourceTree = "<group>"; };
+		1D895E4F6647A15A8A74E0315949FFBB /* Pods_MYWALLET.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MYWALLET.framework; path = "Pods-MYWALLET.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DD6A16564CE76DE950DBB455937B4DB /* PKHUDSuccessView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSuccessView.swift; path = PKHUD/PKHUDSuccessView.swift; sourceTree = "<group>"; };
+		239EA07587FBD400C327E364579681DA /* PKHUDTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDTextView.swift; path = PKHUD/PKHUDTextView.swift; sourceTree = "<group>"; };
+		25ED514471A6B2875153AB41C9741750 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PKHUD/Images.xcassets; sourceTree = "<group>"; };
+		2D1DFC54FE04845C33B863536CE49ED3 /* PKHUDAssets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDAssets.swift; path = PKHUD/PKHUDAssets.swift; sourceTree = "<group>"; };
+		4799B61E73EAD90FF5B45AA308FC509E /* PKHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKHUD-prefix.pch"; sourceTree = "<group>"; };
+		532640575B4A07EFCB56AFE8281F836D /* PKHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKHUD.h; path = PKHUD/PKHUD.h; sourceTree = "<group>"; };
+		5644518191F6FADEF0AD157CB9669CB5 /* Pods-MyWalletNotifications-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyWalletNotifications-resources.sh"; sourceTree = "<group>"; };
+		57A36C54DCA7DCB0D98BEA40BEA9D18C /* Pods-MyWalletNotifications-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MyWalletNotifications-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7311EEFCAB1E5D2EC35A1D0A64305D32 /* Pods-MYWALLET-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MYWALLET-resources.sh"; sourceTree = "<group>"; };
-		81C8F5CD9219C69FB6B656F07786BAE3 /* libPods-MyWalletNotifications.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MyWalletNotifications.a"; path = "libPods-MyWalletNotifications.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A96206C23A6262006D567D34ED8A192 /* Pods-MyWalletNotifications.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyWalletNotifications.release.xcconfig"; sourceTree = "<group>"; };
+		6DBA0F775482E4A6226F23AB6049EFFB /* PKHUDWideBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDWideBaseView.swift; path = PKHUD/PKHUDWideBaseView.swift; sourceTree = "<group>"; };
+		70CA8A63CD774772EF30B096D9430F97 /* WindowRootViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WindowRootViewController.swift; path = PKHUD/WindowRootViewController.swift; sourceTree = "<group>"; };
+		7379262B8966E8B33ECD17583A001B48 /* PKHUDProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDProgressView.swift; path = PKHUD/PKHUDProgressView.swift; sourceTree = "<group>"; };
+		737B430AF207499E704471CF572D67AD /* PKHUDErrorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDErrorView.swift; path = PKHUD/PKHUDErrorView.swift; sourceTree = "<group>"; };
+		7662E5A54CA8D414C82FCD863F0B7E56 /* PKHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PKHUD-dummy.m"; sourceTree = "<group>"; };
+		7702D196EF9754967A6A4A90D0FF0035 /* Pods-MyWalletNotifications.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MyWalletNotifications.modulemap"; sourceTree = "<group>"; };
+		78C23FFE735E0CFFA5A2C4809117E513 /* Pods-MYWALLET.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MYWALLET.release.xcconfig"; sourceTree = "<group>"; };
+		7BC32EA7AC3CBD21B6C75D5BE7F3B53C /* PKHUDAnimating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDAnimating.swift; path = PKHUD/PKHUDAnimating.swift; sourceTree = "<group>"; };
+		7E122E19E83201FBF80A4511819D07C9 /* Pods-MYWALLET-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MYWALLET-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7E69A7408CB21620E2A17E340F6FFD86 /* FrameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameView.swift; path = PKHUD/FrameView.swift; sourceTree = "<group>"; };
+		8802FF4DCAA47D16CF5A991BC2FDC0B3 /* Pods_MyWalletNotifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MyWalletNotifications.framework; path = "Pods-MyWalletNotifications.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CBD2AA5E5A75CE023115E7C4D7C57DA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FEFED1F4CD543745FF9584E206EE95F /* PKHUDSquareBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSquareBaseView.swift; path = PKHUD/PKHUDSquareBaseView.swift; sourceTree = "<group>"; };
+		917A386FED0829D070A984995BBDFA8A /* Pods-MyWalletNotifications-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MyWalletNotifications-umbrella.h"; sourceTree = "<group>"; };
+		9223B2E4F9B8AD40A1238ABCD45CD9FE /* Pods-MYWALLET.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MYWALLET.debug.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93DD5A398423C4B9DA3E09AEDCEB5083 /* Pods-MYWALLET.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MYWALLET.release.xcconfig"; sourceTree = "<group>"; };
-		A1F2E1DDE8B1A9F1E1B614FAF3537A5E /* Pods-MyWalletNotifications-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyWalletNotifications-acknowledgements.plist"; sourceTree = "<group>"; };
-		A706C5BBA24AFEE203316F2BE689CCDD /* Pods-MyWalletNotifications.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyWalletNotifications.debug.xcconfig"; sourceTree = "<group>"; };
-		B260B578E9F32CAA58D5C987AFF5B9F5 /* Pods-MyWalletNotifications-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MyWalletNotifications-dummy.m"; sourceTree = "<group>"; };
-		B585AEEC4F43C69556757696E08E0A7A /* Pods-MYWALLET-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MYWALLET-acknowledgements.plist"; sourceTree = "<group>"; };
-		CF6C71C4E90637C9D333DC74C60EC8FC /* Pods-MYWALLET-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MYWALLET-frameworks.sh"; sourceTree = "<group>"; };
-		D27213489D6FADEA38DE5B1B62D05E98 /* Pods-MYWALLET-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MYWALLET-dummy.m"; sourceTree = "<group>"; };
-		E279F7F40A98F99D07E5B7342D7E4A2C /* Pods-MYWALLET.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MYWALLET.debug.xcconfig"; sourceTree = "<group>"; };
+		96A808445E56D03495DA9156D07A7E80 /* Window.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Window.swift; path = PKHUD/Window.swift; sourceTree = "<group>"; };
+		9B713E657AD5CDB8231E1BC053E43CDC /* Pods-MYWALLET-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MYWALLET-frameworks.sh"; sourceTree = "<group>"; };
+		A46905F68FF355680797D2BE41FB4DC8 /* PKHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PKHUD.xcconfig; sourceTree = "<group>"; };
+		B3E8CA0A5BFCF7D13696F578695DFA69 /* Pods-MYWALLET-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MYWALLET-acknowledgements.plist"; sourceTree = "<group>"; };
+		B8461E19AFCCB4A3162C700E88FE6C5A /* PKHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUD.swift; path = PKHUD/PKHUD.swift; sourceTree = "<group>"; };
+		B8B5D36BAA8A2577F1D1451833E5EB92 /* PKHUDRotatingImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDRotatingImageView.swift; path = PKHUD/PKHUDRotatingImageView.swift; sourceTree = "<group>"; };
+		BE09EA15876E1AFFF65D19669F5902C8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C74A37EF6102CE5B75445F1691C08F02 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C991DDAFA9A0B6F73D2EF255A874FF6B /* Pods-MyWalletNotifications.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyWalletNotifications.debug.xcconfig"; sourceTree = "<group>"; };
+		CF233B26B440A29230BD72004B217C77 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = iOS_SDK/OneSignalSDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
+		D0B34A77D3A515A85A7B706547BDB3F7 /* Pods-MYWALLET-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MYWALLET-umbrella.h"; sourceTree = "<group>"; };
+		D8A055A8E422C3D8DF4322E64ECBDD6F /* PKHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKHUD-umbrella.h"; sourceTree = "<group>"; };
+		DC76A22FD472028CC296AA2BC956A3E9 /* PKHUDSystemActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDSystemActivityIndicatorView.swift; path = PKHUD/PKHUDSystemActivityIndicatorView.swift; sourceTree = "<group>"; };
+		E0AB68333F59627BEB7F0F316709C3E6 /* Pods-MYWALLET.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MYWALLET.modulemap"; sourceTree = "<group>"; };
+		E8F971FBF5E8C55D9F984278AE71956D /* Pods-MyWalletNotifications-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MyWalletNotifications-dummy.m"; sourceTree = "<group>"; };
+		F0C605392B897E07E362774B8731AF78 /* HUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HUD.swift; path = PKHUD/HUD.swift; sourceTree = "<group>"; };
+		F1C76FA679BEB2D4EB2A6020A979BEB1 /* PKHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PKHUD.modulemap; sourceTree = "<group>"; };
+		FC5CB7C04B229E936250B8E673C3A28F /* Pods-MyWalletNotifications-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyWalletNotifications-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2F8D098B5885FC68D07533449FA120A5 /* Frameworks */ = {
+		09097AE0247A71FADE9AE4A13E3E0C55 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3465722842DF0131536DA3332F2B0300 /* Foundation.framework in Frameworks */,
+				1D074B9127FA5FC2639ADEABB5B3D2A2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA8780D564DCAE272D9E272FC0F710E6 /* Frameworks */ = {
+		1F66567B866AA8DE5D006386D2EDD467 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27BD9C255FF509964DADFFDDD00C988E /* Foundation.framework in Frameworks */,
+				CADB77A11AEC922E05EBA0F87539C719 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EE866E1F6CB21180723D8CF3E43FD92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F57EB54A811F73C41F1537030F41EE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		31024DDD121568A44F4DC265C15F4D16 /* Frameworks */ = {
+		1774A409BCCFE3212F95D7A382554F3A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0107E81959F737611A31E5671A94C47B /* OneSignal.framework */,
+				BE09EA15876E1AFFF65D19669F5902C8 /* Info.plist */,
+				F1C76FA679BEB2D4EB2A6020A979BEB1 /* PKHUD.modulemap */,
+				A46905F68FF355680797D2BE41FB4DC8 /* PKHUD.xcconfig */,
+				7662E5A54CA8D414C82FCD863F0B7E56 /* PKHUD-dummy.m */,
+				4799B61E73EAD90FF5B45AA308FC509E /* PKHUD-prefix.pch */,
+				D8A055A8E422C3D8DF4322E64ECBDD6F /* PKHUD-umbrella.h */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/PKHUD";
 			sourceTree = "<group>";
 		};
-		54F1C2B790D076A1DFBCEA466D0C7F62 /* Targets Support Files */ = {
+		1D33509444CCE4478854326DB8B6FEE2 /* Pods-MYWALLET */ = {
 			isa = PBXGroup;
 			children = (
-				6FDE97F84FE5BDA6AA682D8FF802BA3C /* Pods-MYWALLET */,
-				D4C68285CCB6C0C41FA9DEDC057454FB /* Pods-MyWalletNotifications */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		6202124E9D433C3EA7B1CF2F09917CA5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B109A558AEC0464E1C8AD13A3517ECA8 /* OneSignal */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		6FDE97F84FE5BDA6AA682D8FF802BA3C /* Pods-MYWALLET */ = {
-			isa = PBXGroup;
-			children = (
-				58BD080D2618FC29145DA89A9BF663B7 /* Pods-MYWALLET-acknowledgements.markdown */,
-				B585AEEC4F43C69556757696E08E0A7A /* Pods-MYWALLET-acknowledgements.plist */,
-				D27213489D6FADEA38DE5B1B62D05E98 /* Pods-MYWALLET-dummy.m */,
-				CF6C71C4E90637C9D333DC74C60EC8FC /* Pods-MYWALLET-frameworks.sh */,
-				7311EEFCAB1E5D2EC35A1D0A64305D32 /* Pods-MYWALLET-resources.sh */,
-				E279F7F40A98F99D07E5B7342D7E4A2C /* Pods-MYWALLET.debug.xcconfig */,
-				93DD5A398423C4B9DA3E09AEDCEB5083 /* Pods-MYWALLET.release.xcconfig */,
+				8CBD2AA5E5A75CE023115E7C4D7C57DA /* Info.plist */,
+				E0AB68333F59627BEB7F0F316709C3E6 /* Pods-MYWALLET.modulemap */,
+				7E122E19E83201FBF80A4511819D07C9 /* Pods-MYWALLET-acknowledgements.markdown */,
+				B3E8CA0A5BFCF7D13696F578695DFA69 /* Pods-MYWALLET-acknowledgements.plist */,
+				1642A893BE09745E2E480F39EA3328BA /* Pods-MYWALLET-dummy.m */,
+				9B713E657AD5CDB8231E1BC053E43CDC /* Pods-MYWALLET-frameworks.sh */,
+				1D402D51E685A39EC5509FBE2071A878 /* Pods-MYWALLET-resources.sh */,
+				D0B34A77D3A515A85A7B706547BDB3F7 /* Pods-MYWALLET-umbrella.h */,
+				9223B2E4F9B8AD40A1238ABCD45CD9FE /* Pods-MYWALLET.debug.xcconfig */,
+				78C23FFE735E0CFFA5A2C4809117E513 /* Pods-MYWALLET.release.xcconfig */,
 			);
 			name = "Pods-MYWALLET";
 			path = "Target Support Files/Pods-MYWALLET";
+			sourceTree = "<group>";
+		};
+		2D08099FAE3AEA30B0703A069D6D4F2F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				25ED514471A6B2875153AB41C9741750 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3333072108D91A0BF03085A52CB09FC2 /* PKHUD */ = {
+			isa = PBXGroup;
+			children = (
+				7E69A7408CB21620E2A17E340F6FFD86 /* FrameView.swift */,
+				F0C605392B897E07E362774B8731AF78 /* HUD.swift */,
+				532640575B4A07EFCB56AFE8281F836D /* PKHUD.h */,
+				B8461E19AFCCB4A3162C700E88FE6C5A /* PKHUD.swift */,
+				7BC32EA7AC3CBD21B6C75D5BE7F3B53C /* PKHUDAnimating.swift */,
+				074F3BD57C4869ADA5CCA0DEC620DE15 /* PKHUDAnimation.swift */,
+				2D1DFC54FE04845C33B863536CE49ED3 /* PKHUDAssets.swift */,
+				737B430AF207499E704471CF572D67AD /* PKHUDErrorView.swift */,
+				7379262B8966E8B33ECD17583A001B48 /* PKHUDProgressView.swift */,
+				B8B5D36BAA8A2577F1D1451833E5EB92 /* PKHUDRotatingImageView.swift */,
+				8FEFED1F4CD543745FF9584E206EE95F /* PKHUDSquareBaseView.swift */,
+				1DD6A16564CE76DE950DBB455937B4DB /* PKHUDSuccessView.swift */,
+				DC76A22FD472028CC296AA2BC956A3E9 /* PKHUDSystemActivityIndicatorView.swift */,
+				239EA07587FBD400C327E364579681DA /* PKHUDTextView.swift */,
+				6DBA0F775482E4A6226F23AB6049EFFB /* PKHUDWideBaseView.swift */,
+				96A808445E56D03495DA9156D07A7E80 /* Window.swift */,
+				70CA8A63CD774772EF30B096D9430F97 /* WindowRootViewController.swift */,
+				2D08099FAE3AEA30B0703A069D6D4F2F /* Resources */,
+				1774A409BCCFE3212F95D7A382554F3A /* Support Files */,
+			);
+			name = PKHUD;
+			path = PKHUD;
+			sourceTree = "<group>";
+		};
+		3473BD655804CEC4A44EC5933FA06DF3 /* OneSignal */ = {
+			isa = PBXGroup;
+			children = (
+				849FF128B2E985167D3D5D37C61F92CD /* Frameworks */,
+			);
+			name = OneSignal;
+			path = OneSignal;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -99,19 +207,45 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				6202124E9D433C3EA7B1CF2F09917CA5 /* Pods */,
-				CCA794483317D86CAE261EA2C9154FC5 /* Products */,
-				54F1C2B790D076A1DFBCEA466D0C7F62 /* Targets Support Files */,
+				F470463F1C37F90A70B15E193ABB8D41 /* Pods */,
+				B04FB06F7983177148AF5D4B6C561C5A /* Products */,
+				D59280D587FF130B92597C8005C885DB /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		B109A558AEC0464E1C8AD13A3517ECA8 /* OneSignal */ = {
+		849FF128B2E985167D3D5D37C61F92CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				31024DDD121568A44F4DC265C15F4D16 /* Frameworks */,
+				CF233B26B440A29230BD72004B217C77 /* OneSignal.framework */,
 			);
-			name = OneSignal;
-			path = OneSignal;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B04FB06F7983177148AF5D4B6C561C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00B8DD189A9EA9AFA4A898E5700D6E34 /* PKHUD.framework */,
+				1D895E4F6647A15A8A74E0315949FFBB /* Pods_MYWALLET.framework */,
+				8802FF4DCAA47D16CF5A991BC2FDC0B3 /* Pods_MyWalletNotifications.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B6E831ADF903B8733A7C9F9501D55286 /* Pods-MyWalletNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				C74A37EF6102CE5B75445F1691C08F02 /* Info.plist */,
+				7702D196EF9754967A6A4A90D0FF0035 /* Pods-MyWalletNotifications.modulemap */,
+				57A36C54DCA7DCB0D98BEA40BEA9D18C /* Pods-MyWalletNotifications-acknowledgements.markdown */,
+				FC5CB7C04B229E936250B8E673C3A28F /* Pods-MyWalletNotifications-acknowledgements.plist */,
+				E8F971FBF5E8C55D9F984278AE71956D /* Pods-MyWalletNotifications-dummy.m */,
+				5644518191F6FADEF0AD157CB9669CB5 /* Pods-MyWalletNotifications-resources.sh */,
+				917A386FED0829D070A984995BBDFA8A /* Pods-MyWalletNotifications-umbrella.h */,
+				C991DDAFA9A0B6F73D2EF255A874FF6B /* Pods-MyWalletNotifications.debug.xcconfig */,
+				6A96206C23A6262006D567D34ED8A192 /* Pods-MyWalletNotifications.release.xcconfig */,
+			);
+			name = "Pods-MyWalletNotifications";
+			path = "Target Support Files/Pods-MyWalletNotifications";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -122,15 +256,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CCA794483317D86CAE261EA2C9154FC5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2CB86FBD7F910DC43C1D964FB2D42959 /* libPods-MYWALLET.a */,
-				81C8F5CD9219C69FB6B656F07786BAE3 /* libPods-MyWalletNotifications.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,29 +264,62 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		D4C68285CCB6C0C41FA9DEDC057454FB /* Pods-MyWalletNotifications */ = {
+		D59280D587FF130B92597C8005C885DB /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				41F99FE285E667902EE80AA0838D5FE1 /* Pods-MyWalletNotifications-acknowledgements.markdown */,
-				A1F2E1DDE8B1A9F1E1B614FAF3537A5E /* Pods-MyWalletNotifications-acknowledgements.plist */,
-				B260B578E9F32CAA58D5C987AFF5B9F5 /* Pods-MyWalletNotifications-dummy.m */,
-				487D7A2189FB1DF8FE35B5F3B6227C53 /* Pods-MyWalletNotifications-resources.sh */,
-				A706C5BBA24AFEE203316F2BE689CCDD /* Pods-MyWalletNotifications.debug.xcconfig */,
-				469B08D7845457CBD2C1550FA0969718 /* Pods-MyWalletNotifications.release.xcconfig */,
+				1D33509444CCE4478854326DB8B6FEE2 /* Pods-MYWALLET */,
+				B6E831ADF903B8733A7C9F9501D55286 /* Pods-MyWalletNotifications */,
 			);
-			name = "Pods-MyWalletNotifications";
-			path = "Target Support Files/Pods-MyWalletNotifications";
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F470463F1C37F90A70B15E193ABB8D41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3473BD655804CEC4A44EC5933FA06DF3 /* OneSignal */,
+				3333072108D91A0BF03085A52CB09FC2 /* PKHUD */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		36B460BE61CF958B127744415BD23F7D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E07D61E16D503C995465B1FB15A7E917 /* Pods-MYWALLET-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F23516834B88FAD85EE345E070EC069 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1823F57D1F20FCE55466E033892724A3 /* Pods-MyWalletNotifications-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEEFB59308D9874EDAA446AD0659FA29 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1929F91EB38B923FBFA0B2F53C0C4877 /* PKHUD-umbrella.h in Headers */,
+				2DCA4225866D2445C444325589BD9744 /* PKHUD.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		4FBB5688BC346B376F865DED26D5D8AB /* Pods-MyWalletNotifications */ = {
+		9A81D98116A51A03BD7A458458285CBF /* Pods-MyWalletNotifications */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C866DC64736BA757538777C51B3F7CCD /* Build configuration list for PBXNativeTarget "Pods-MyWalletNotifications" */;
+			buildConfigurationList = 09DEE961AB4C78A176CE427B5C52F0E8 /* Build configuration list for PBXNativeTarget "Pods-MyWalletNotifications" */;
 			buildPhases = (
-				7C7E18D572927348CE0F39A7BE40E5A0 /* Sources */,
-				2F8D098B5885FC68D07533449FA120A5 /* Frameworks */,
+				CD1E687B9B00CA2695CD89046D10789A /* Sources */,
+				8EE866E1F6CB21180723D8CF3E43FD92 /* Frameworks */,
+				8F23516834B88FAD85EE345E070EC069 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -169,24 +327,44 @@
 			);
 			name = "Pods-MyWalletNotifications";
 			productName = "Pods-MyWalletNotifications";
-			productReference = 81C8F5CD9219C69FB6B656F07786BAE3 /* libPods-MyWalletNotifications.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 8802FF4DCAA47D16CF5A991BC2FDC0B3 /* Pods_MyWalletNotifications.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		C609A3DE01F7F554902E354C6F6CD2FC /* Pods-MYWALLET */ = {
+		D7A75F149082140741FC1E0B5B2863C8 /* PKHUD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04DD1513E62CDFF8717D089BB24F4BB2 /* Build configuration list for PBXNativeTarget "Pods-MYWALLET" */;
+			buildConfigurationList = 9306D49004A2A30AC52787A7B1C9C87A /* Build configuration list for PBXNativeTarget "PKHUD" */;
 			buildPhases = (
-				FB2CC7CA9D850E4DC00DFBA0B63CD0B8 /* Sources */,
-				FA8780D564DCAE272D9E272FC0F710E6 /* Frameworks */,
+				64C2A244B5B13B1D5FBAAA42BFE1724F /* Sources */,
+				09097AE0247A71FADE9AE4A13E3E0C55 /* Frameworks */,
+				CEEFB59308D9874EDAA446AD0659FA29 /* Headers */,
+				A6E5CC81DF41A96AA2FC861070D8146A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = PKHUD;
+			productName = PKHUD;
+			productReference = 00B8DD189A9EA9AFA4A898E5700D6E34 /* PKHUD.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FB6A511BF6EC002798B99B5AE27B5D72 /* Pods-MYWALLET */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18D49B30DD97862D1EBC6376E1A5E325 /* Build configuration list for PBXNativeTarget "Pods-MYWALLET" */;
+			buildPhases = (
+				EF3B69B317DEE4C3C6F4BB850B5957C2 /* Sources */,
+				1F66567B866AA8DE5D006386D2EDD467 /* Frameworks */,
+				36B460BE61CF958B127744415BD23F7D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE3DBAE77A0087FB00C298794E55F4C2 /* PBXTargetDependency */,
+			);
 			name = "Pods-MYWALLET";
 			productName = "Pods-MYWALLET";
-			productReference = 2CB86FBD7F910DC43C1D964FB2D42959 /* libPods-MYWALLET.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 1D895E4F6647A15A8A74E0315949FFBB /* Pods_MYWALLET.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -205,83 +383,121 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CCA794483317D86CAE261EA2C9154FC5 /* Products */;
+			productRefGroup = B04FB06F7983177148AF5D4B6C561C5A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C609A3DE01F7F554902E354C6F6CD2FC /* Pods-MYWALLET */,
-				4FBB5688BC346B376F865DED26D5D8AB /* Pods-MyWalletNotifications */,
+				D7A75F149082140741FC1E0B5B2863C8 /* PKHUD */,
+				FB6A511BF6EC002798B99B5AE27B5D72 /* Pods-MYWALLET */,
+				9A81D98116A51A03BD7A458458285CBF /* Pods-MyWalletNotifications */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		7C7E18D572927348CE0F39A7BE40E5A0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		A6E5CC81DF41A96AA2FC861070D8146A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				943EA827322D46CD43D2F664B4CEA0F5 /* Pods-MyWalletNotifications-dummy.m in Sources */,
+				34D8AB5C8FA400C58D7CA084633DF744 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB2CC7CA9D850E4DC00DFBA0B63CD0B8 /* Sources */ = {
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64C2A244B5B13B1D5FBAAA42BFE1724F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03CC28F48D44B86314951CFE4C86A922 /* Pods-MYWALLET-dummy.m in Sources */,
+				1F34910B27A3B86966E07898A2B70AE6 /* FrameView.swift in Sources */,
+				BA1B53BE85DE9BD789FE1C32FBA8C752 /* HUD.swift in Sources */,
+				E57944FDD00D7F5F2674D4D52E0F52BA /* PKHUD-dummy.m in Sources */,
+				BF541FB658B81D55E6A960701BF0619E /* PKHUD.swift in Sources */,
+				B1DC643D39F725A5C89C8195B5C10A09 /* PKHUDAnimating.swift in Sources */,
+				3470186F176465D3CA04711D0D82DF38 /* PKHUDAnimation.swift in Sources */,
+				869B25CDDA4D1BDA81A495A23D43E108 /* PKHUDAssets.swift in Sources */,
+				17E7E62102D200AFE11B049F570C9397 /* PKHUDErrorView.swift in Sources */,
+				766750E7B98FF8495403D0C7B5064D6C /* PKHUDProgressView.swift in Sources */,
+				AEA27A6C1523E5B1A1B3B74CA02FB67D /* PKHUDRotatingImageView.swift in Sources */,
+				7F09171ED8899C35E45511452323B3DF /* PKHUDSquareBaseView.swift in Sources */,
+				A5A9F17A94A6CC0F7D4E9DE0FCAFE5AB /* PKHUDSuccessView.swift in Sources */,
+				89C4ADD534D41DF5442F67D799B8E12B /* PKHUDSystemActivityIndicatorView.swift in Sources */,
+				A7BA7C4E4C047A5698A68CA76A453605 /* PKHUDTextView.swift in Sources */,
+				D0F542D62E2AA523E0A3D28DC85D2012 /* PKHUDWideBaseView.swift in Sources */,
+				F61C2235825FE532417891978344385E /* Window.swift in Sources */,
+				F4C22A07683E879CB3ECF7D6A73F667E /* WindowRootViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1E687B9B00CA2695CD89046D10789A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AAAEE794B80FCD4F1CCEC6A650A655D /* Pods-MyWalletNotifications-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF3B69B317DEE4C3C6F4BB850B5957C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB2E58C66F679FAEC01499BDDECE2242 /* Pods-MYWALLET-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin XCBuildConfiguration section */
-		03428F6C2B19C7F09B59EEF81A5DA686 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93DD5A398423C4B9DA3E09AEDCEB5083 /* Pods-MYWALLET.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
+/* Begin PBXTargetDependency section */
+		BE3DBAE77A0087FB00C298794E55F4C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PKHUD;
+			target = D7A75F149082140741FC1E0B5B2863C8 /* PKHUD */;
+			targetProxy = 0BD159BF44629C07F0A4864C8F18BFFD /* PBXContainerItemProxy */;
 		};
-		094173F6E4CE1AF33AF97171ED87502A /* Debug */ = {
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		14355EEC16BA93A57850AF443F0457ED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E279F7F40A98F99D07E5B7342D7E4A2C /* Pods-MYWALLET.debug.xcconfig */;
+			baseConfigurationReference = 9223B2E4F9B8AD40A1238ABCD45CD9FE /* Pods-MYWALLET.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				INFOPLIST_FILE = "Target Support Files/Pods-MYWALLET/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MYWALLET/Pods-MYWALLET.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_MYWALLET;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		0DFD316F1EFFBDE831AA27BE19131288 /* Release */ = {
+		1A41B15D3AA834993ADDD808FA9D8764 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -317,7 +533,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
@@ -325,31 +541,79 @@
 			};
 			name = Release;
 		};
-		604EB7786881FBAD3F3C4D32B539C9BA /* Debug */ = {
+		849F8B167232A04489B29AE27A152790 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A706C5BBA24AFEE203316F2BE689CCDD /* Pods-MyWalletNotifications.debug.xcconfig */;
+			baseConfigurationReference = A46905F68FF355680797D2BE41FB4DC8 /* PKHUD.xcconfig */;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				GCC_PREFIX_HEADER = "Target Support Files/PKHUD/PKHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PKHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PKHUD/PKHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PKHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9B0E929CDAA318EDA225C2989056C4BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A96206C23A6262006D567D34ED8A192 /* Pods-MyWalletNotifications.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MyWalletNotifications/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MODULEMAP_FILE = "Target Support Files/Pods-MyWalletNotifications/Pods-MyWalletNotifications.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_MyWalletNotifications;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		B434E84AC9A795F2D6CD6F6B31181B9B /* Debug */ = {
+		BC80BBB5C066539FFFC0B2127CA5D3C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -389,7 +653,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -398,38 +662,133 @@
 			};
 			name = Debug;
 		};
-		FF1BD9BA7EC19078F1D44D0395420EED /* Release */ = {
+		BE0AFBE519B9A8B733A2E54EC46366B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 469B08D7845457CBD2C1550FA0969718 /* Pods-MyWalletNotifications.release.xcconfig */;
+			baseConfigurationReference = C991DDAFA9A0B6F73D2EF255A874FF6B /* Pods-MyWalletNotifications.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				INFOPLIST_FILE = "Target Support Files/Pods-MyWalletNotifications/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MyWalletNotifications/Pods-MyWalletNotifications.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MyWalletNotifications;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DE4A6C0BA2A932D37A5DBAE45029F8F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78C23FFE735E0CFFA5A2C4809117E513 /* Pods-MYWALLET.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MYWALLET/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MYWALLET/Pods-MYWALLET.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_MYWALLET;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		E62F0E99BC964DBB6D6B022CFD992745 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A46905F68FF355680797D2BE41FB4DC8 /* PKHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PKHUD/PKHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PKHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PKHUD/PKHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PKHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		04DD1513E62CDFF8717D089BB24F4BB2 /* Build configuration list for PBXNativeTarget "Pods-MYWALLET" */ = {
+		09DEE961AB4C78A176CE427B5C52F0E8 /* Build configuration list for PBXNativeTarget "Pods-MyWalletNotifications" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				094173F6E4CE1AF33AF97171ED87502A /* Debug */,
-				03428F6C2B19C7F09B59EEF81A5DA686 /* Release */,
+				BE0AFBE519B9A8B733A2E54EC46366B6 /* Debug */,
+				9B0E929CDAA318EDA225C2989056C4BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18D49B30DD97862D1EBC6376E1A5E325 /* Build configuration list for PBXNativeTarget "Pods-MYWALLET" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14355EEC16BA93A57850AF443F0457ED /* Debug */,
+				DE4A6C0BA2A932D37A5DBAE45029F8F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -437,17 +796,17 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B434E84AC9A795F2D6CD6F6B31181B9B /* Debug */,
-				0DFD316F1EFFBDE831AA27BE19131288 /* Release */,
+				BC80BBB5C066539FFFC0B2127CA5D3C4 /* Debug */,
+				1A41B15D3AA834993ADDD808FA9D8764 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C866DC64736BA757538777C51B3F7CCD /* Build configuration list for PBXNativeTarget "Pods-MyWalletNotifications" */ = {
+		9306D49004A2A30AC52787A7B1C9C87A /* Build configuration list for PBXNativeTarget "PKHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				604EB7786881FBAD3F3C4D32B539C9BA /* Debug */,
-				FF1BD9BA7EC19078F1D44D0395420EED /* Release */,
+				E62F0E99BC964DBB6D6B022CFD992745 /* Debug */,
+				849F8B167232A04489B29AE27A152790 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

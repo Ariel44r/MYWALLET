@@ -39,7 +39,6 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
     @IBOutlet weak var labelIfLogged: UITextField!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var buttonOutlet: UIButton!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBAction func loginButton(_ sender: Any) {
         //check if notification are received
@@ -64,7 +63,7 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
     }
     
     func callLoginService(_ phone: String) {
-        activityIndicator.startAnimating()
+        Constants.progressIndicator.viewProgress()
         serverManager.postRequest("LOGIN","Telefono",phone) {
             results, error in
             if let error = error {
@@ -72,7 +71,8 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
                 return
             }
             if let results = results {
-                self.activityIndicator.stopAnimating()
+                Constants.progressIndicator.dismissProgress()
+                //self.activityIndicator.stopAnimating()
                 self.dataFromServer = results
                 if self.validateResponseCode(self.dataFromServer) {
                     self.callSMSValidationService(phone, Constants.textAlertParam.TEXTALERTPARAM2)
@@ -92,7 +92,7 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
             if let results = results {
                 debugPrint(results)
                 codigoValidacionInput = results
-                self.activityIndicator.startAnimating()
+                Constants.progressIndicator.viewProgress()
                 self.serverManager.postRequest("SMS","Telefono",phone) {
                     results, error in
                     if let error = error {
@@ -100,7 +100,7 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
                         return
                     }
                     if let results = results {
-                        self.activityIndicator.stopAnimating()
+                        Constants.progressIndicator.dismissProgress()
                         //after receive data from server
                         if self.validateResponseCode(results) {
                             let response = self.parseResponse(results)
