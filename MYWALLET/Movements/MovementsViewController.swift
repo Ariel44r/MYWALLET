@@ -29,9 +29,7 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var labelSaldo: UILabel!
     
     @IBAction func logOutButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-        DataPersistence.removeUserPreferences()
-        self.delegate?.logOut()
+        self.actionSheetMenu()
     }
     
     override func viewDidLoad() {
@@ -98,5 +96,31 @@ extension MovementsViewController {
             maskCard.insert(card[indexChar], at: maskCard.endIndex)
         }
         return maskCard
+    }
+}
+
+extension MovementsViewController {
+    func actionSheetMenu() {
+        let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)
+        let refreshMovements = UIAlertAction(title: "Refresh Movements", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            debugPrint("Refresh Movements Selected")
+            self.getMovements()
+        })
+        let logOut = UIAlertAction(title: "Log Out", style: .destructive, handler: {
+            (alert: UIAlertAction!) -> Void in
+            debugPrint("Log Out selected")
+            self.dismiss(animated: true, completion: nil)
+            DataPersistence.removeUserPreferences()
+            self.delegate?.logOut()
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
+            (alert: UIAlertAction!) -> Void in
+            print("Cancel Selected")
+        })
+        optionMenu.addAction(refreshMovements)
+        optionMenu.addAction(logOut)
+        optionMenu.addAction(cancelAction)
+        self.present(optionMenu, animated: true, completion: nil)
     }
 }
