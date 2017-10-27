@@ -72,7 +72,7 @@ struct Constants {
             "messageButton":"VALIDAR",
             ]
         static let TEXTALERTPARAMETERSINCORRECTLOGIN = [
-            "titleHeader":"El número que ingreso contiene menos de 10 digitos, por favor intente de nuevo",
+            "titleHeader":"El número que ingresó no es valido, por favor intente de nuevo",
             "messageBody":"Número",
             "messageButton":"INGRESAR",
             ]
