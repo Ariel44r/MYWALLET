@@ -56,6 +56,7 @@ class ServerManager {
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: {(data, response, error) -> Void in
             if error != nil {
                 debugPrint(error ?? "received error from server")
+                //Constants.progressIndicator.progressText("You are not connected to internet", "Please check the connection and try again")
             } else {
                 let httpResponse = response as! HTTPURLResponse
                 debugPrint("server Response: \(httpResponse)")

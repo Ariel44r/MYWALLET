@@ -78,5 +78,8 @@ struct Constants {
         static func dismissProgress() {
             HUD.hide()
         }
+        static func progressText(_ title: String, _ subtitle: String) {
+            HUD.show(.labeledProgress(title: title, subtitle: subtitle))
+        }
     }
 }

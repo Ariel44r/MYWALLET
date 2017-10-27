@@ -63,7 +63,8 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
     }
     
     func callLoginService(_ phone: String) {
-        Constants.progressIndicator.viewProgress()
+        Constants.progressIndicator.progressText("Sending request", "")
+        //Constants.progressIndicator.viewProgress()
         serverManager.postRequest("LOGIN","Telefono",phone) {
             results, error in
             if let error = error {
@@ -92,7 +93,8 @@ class ViewController: UIViewController,  MovementsViewControllerDelegate, Autori
             if let results = results {
                 debugPrint(results)
                 codigoValidacionInput = results
-                Constants.progressIndicator.viewProgress()
+                Constants.progressIndicator.progressText("Validating Code", "")
+                //Constants.progressIndicator.viewProgress()
                 self.serverManager.postRequest("SMS","Telefono",phone) {
                     results, error in
                     if let error = error {

@@ -36,7 +36,7 @@ class MovementsViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Constants.progressIndicator.viewProgress()
+        Constants.progressIndicator.progressText("Downloading movements", "Please hold on")
         processMovements.callMovementsService(self.response!.tokenSeguridad) {
             results, resultsArray, error in
             if let error = error {
